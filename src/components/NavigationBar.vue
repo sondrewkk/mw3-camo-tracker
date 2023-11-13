@@ -26,7 +26,7 @@
           <li><router-link to="/tracker">Tracker</router-link></li>
         </ul>
       </div>
-      <a class="btn btn-ghost normal-case text-xl">Cod MWIII Camo tracker</a>
+      <a class="btn btn-ghost normal-case text-xl">CoD MWIII Camo tracker</a>
     </div>
     <div class="navbar-center hidden lg:flex">
       <ul class="menu menu-horizontal px-1">
