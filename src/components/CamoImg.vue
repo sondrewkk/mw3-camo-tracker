@@ -20,6 +20,9 @@ defineEmits(['toggleCamo'])
         <img 
             class="rounded" 
             :src="getCamoImgUrl(progress.camofluageName)" :alt="progress.camofluageName" >
-        <CheckIcon class="absolute bottom-0 stroke-green-500 bg-black/75 stroke-2" v-show="progress.achived"></CheckIcon>
+        <CheckIcon 
+            class="absolute bottom-0 stroke-green-500 stroke-2 bg-black/75 rounded" 
+            v-show="progress.achived" 
+        />
     </button>
 </template>
