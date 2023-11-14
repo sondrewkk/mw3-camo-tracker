@@ -14,20 +14,20 @@ export interface WeaponProgress {
 
 export function loadProgress(): WeaponProgress[] {
     let progress: WeaponProgress[] = []
-    const storedProgress = localStorage.getItem('weaponsProgress')
+    const storedProgress = localStorage.getItem('progress')
     if (storedProgress) {
         progress = JSON.parse(storedProgress)
     }
     else {
         progress = loadDefaultProgress()
-        localStorage.setItem('weaponsProgress', JSON.stringify(progress))    
+        localStorage.setItem('progress', JSON.stringify(progress))    
     }
 
     return progress
 }
 
 export function saveProgress(weaponProgress: WeaponProgress[]) {
-    localStorage.setItem('weaponsProgress', JSON.stringify(weaponProgress))
+    localStorage.setItem('progress', JSON.stringify(weaponProgress))
 }
 
 function loadDefaultProgress(): WeaponProgress[] {

@@ -1,7 +1,7 @@
 import { ref, onMounted } from 'vue'
 import { defineStore } from 'pinia'
 import type { WeaponProgress } from '@/types/WeaponProgress'
-import { loadProgress } from '@/types/WeaponProgress'
+import { loadProgress, saveProgress } from '@/types/WeaponProgress'
 
 
 export const useWeaponProgressStore = defineStore('weaponProgress', () => {
@@ -11,16 +11,16 @@ export const useWeaponProgressStore = defineStore('weaponProgress', () => {
     weaponProgress.value = loadProgress()
   })
 
-  function setCamoAchived(weaponName: string, camoName: string, achived: boolean) {
+  function toggleCamofluageComplete(weaponName: string, camoName: string) {
     const weapon = weaponProgress.value.find((weapon) => weapon.weaponName === weaponName)
     if (weapon) {
       const camo = weapon.camofluages.find((camo) => camo.camofluageName === camoName)
       if (camo) {
-        camo.achived = achived
-        
+        camo.achived = !camo.achived
+        saveProgress(weaponProgress.value)
       }
     }
   }
 
-  return { weaponProgress, setCamoAchived }
+  return { weaponProgress, toggleCamofluageComplete }
 })
