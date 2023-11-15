@@ -3,7 +3,7 @@ import { useWeaponProgressStore } from '@/stores/weaponProgressStore'
 import { storeToRefs } from 'pinia'
 import { computed } from 'vue'
 import ProgressCard from '@/components/ProgressCard.vue'
-import type { WeaponCategory } from '@/types/Weapon'
+import type { WeaponCategory } from '@/composeables/weapon'
 
 const weaponsProgresStore = useWeaponProgressStore()
 const { weaponProgress } = storeToRefs(weaponsProgresStore)
