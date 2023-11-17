@@ -1,6 +1,6 @@
 import { allWeapons } from '@/assets/weapons'
 import { computed, ref } from 'vue'
-import type { Camofluage } from '@/types/Camofluage'
+import type { Camofluage } from '@/composeables/camofluage'
 
 export type WeaponCategory = 'Assault rifle'
 

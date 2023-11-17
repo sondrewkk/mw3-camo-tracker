@@ -24,10 +24,31 @@ const showMenu = ref(false)
           :class="showMenu ? 'flex' : 'hidden'"
           class="flex-col mt-8 space-y-6 md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 md:mt-0 items-center"
         >
-          <router-link to="/" class="font-bold text-2xl hover:underline decoration-2 underline-offset-2" active-class="text-gray-200"> Home</router-link>
-          <router-link to="/tracker" class="font-bold text-2xl hover:underline decoration-2 underline-offset-2" active-class="text-gray-200">Tracker</router-link>
-          <router-link to="/settings" class="font-bold text-2xl hover:underline decoration-2 underline-offset-2" active-class="text-gray-200">Settings</router-link>
-          <router-link to="/about" class="font-bold text-2xl hover:underline decoration-2 underline-offset-2" active-class="text-gray-200">About</router-link>
+          <router-link
+            to="/"
+            class="font-bold text-2xl hover:underline decoration-2 underline-offset-2"
+            active-class="text-gray-200"
+          >
+            Home</router-link
+          >
+          <router-link
+            to="/tracker"
+            class="font-bold text-2xl hover:underline decoration-2 underline-offset-2"
+            active-class="text-gray-200"
+            >Tracker</router-link
+          >
+          <router-link
+            to="/settings"
+            class="font-bold text-2xl hover:underline decoration-2 underline-offset-2"
+            active-class="text-gray-200"
+            >Settings</router-link
+          >
+          <router-link
+            to="/about"
+            class="font-bold text-2xl hover:underline decoration-2 underline-offset-2"
+            active-class="text-gray-200"
+            >About</router-link
+          >
         </ul>
       </nav>
     </div>

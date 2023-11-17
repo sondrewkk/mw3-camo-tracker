@@ -16,14 +16,14 @@ defineEmits(['toggleCamo'])
 
 <template>
   <button @click="$emit('toggleCamo')" class="relative">
-    <img
-      class="rounded"
-      :src="getCamoImgUrl(progress.camofluageName)"
-      :alt="progress.camofluageName"
-    />
-    <CheckIcon
-      class="absolute bottom-0 stroke-green-500 stroke-2 bg-black/75 rounded"
-      v-show="progress.achived"
-    />
+    <div class="bg-black rounded">
+      <img
+        class="rounded"
+        :class="progress.achived ? 'opacity-25' : ''"
+        :src="getCamoImgUrl(progress.camofluageName)"
+        :alt="progress.camofluageName"
+      />
+      <CheckIcon class="absolute bottom-0 stroke-green-500 stroke-2" v-show="progress.achived" />
+    </div>
   </button>
 </template>

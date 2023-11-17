@@ -2,28 +2,41 @@
 import type { WeaponProgress } from '@/composeables/weaponProgress'
 import CamoImg from './CamoImg.vue'
 import { useWeaponProgressStore } from '@/stores/weaponProgressStore'
+import { useCamo } from '@/composeables/camofluage'
 
 const { toggleCamofluageComplete } = useWeaponProgressStore()
+const { getCamofluageChallenge } = useCamo()
 
 defineProps<{
   weaponProgress: WeaponProgress
+  displayList: boolean
 }>()
 </script>
 
 <template>
-  <div class="card w-full bg-base-100 shadow-xl">
-    <div class="card-body">
-      <h2 class="card-title text-3xl text-center">
+  <div class="card w-full max-h-screen bg-base-100 shadow-xl">
+    <div class="card-body items-center py-0 px-2 mb-6">
+      <h2 class="card-title text-2xl text-center pt-6 pb-4">
         {{ weaponProgress.weaponName }}
       </h2>
-    </div>
-    <div class="card-actions flex-nowrap p-2">
-      <li class="list-none" v-for="camo in weaponProgress.camofluages" :key="camo.camofluageName">
-        <CamoImg
-          :progress="camo"
-          @toggle-camo="toggleCamofluageComplete(weaponProgress.weaponName, camo.camofluageName)"
-        />
-      </li>
+      <div class="flex" :class="displayList ? 'flex-col gap-4' : 'flex-row gap-2'">
+        <ul v-for="camo in weaponProgress.camofluages" :key="camo.camofluageName">
+          <li>
+            <div class="flex flex-row items-center justify-center">
+              <CamoImg
+                class="basis-10 flex-none"
+                :progress="camo"
+                @toggle-camo="
+                  toggleCamofluageComplete(weaponProgress.weaponName, camo.camofluageName)
+                "
+              />
+              <p class="pl-2" v-if="displayList">
+                {{ getCamofluageChallenge(camo.camofluageName) }}
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </template>
