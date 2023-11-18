@@ -32,7 +32,7 @@ const groupedProgress = computed(() => {
   <div>
     <TrackerFilter />
 
-    <div class="flex flex-col px-2">
+    <div class="flex flex-col px-2 pt-8">
       <ul v-for="(weapons, category) in groupedProgress" :key="category">
         <h2 class="text-3xl font-bold py-8">{{ category }}s</h2>
         <div class="flex flex-col space-y-8">
