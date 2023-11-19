@@ -10,7 +10,7 @@ const { toggleDisplayList, toggleShowFilterMenu } = trackerFilterStore
 <template>
   <div class="px-2 pt-6">
     <div class="flex flex-col space-y-4">
-      <button class="btn btn-lg border-2 border-base-100" @click="toggleShowFilterMenu">
+      <button class="btn btn-lg border-2 border-base-100 hover:border-gray-500 hover:bg-base-200" @click="toggleShowFilterMenu">
         {{ showFilterMenu ? 'Hide' : 'Show' }} Filters
       </button>
 
@@ -56,8 +56,8 @@ const { toggleDisplayList, toggleShowFilterMenu } = trackerFilterStore
 
       <!-- Favorites and list/grid -->
       <div class="flex justify-between space-x-4">
-        <button class="btn btn-lg border-2 border-base-100 w-1/2">Favorites</button>
-        <button class="btn btn-lg border-2 border-base-100 grow" @click="toggleDisplayList">
+        <button class="btn btn-lg border-2 border-base-100 w-1/2 hover:border-gray-500 hover:bg-base-200">Favorites</button>
+        <button class="btn btn-lg border-2 border-base-100 grow hover:border-gray-500 hover:bg-base-200" @click="toggleDisplayList">
           {{ displayList ? 'List' : 'Grid' }}
         </button>
       </div>
