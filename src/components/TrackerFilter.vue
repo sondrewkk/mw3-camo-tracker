@@ -21,10 +21,10 @@ const { toggleDisplayList, toggleShowFilterMenu } = trackerFilterStore
       >
         <div class="form-control w-full px-2">
           <label class="label">
-            <span class="lavel-text">Category</span>
+            <span class="lavel-text text-lg">Category</span>
           </label>
-          <select class="select w-full">
-            <option disabled selected>All</option>
+          <select class="select select-bordered select-lg w-full">
+            <option selected>All</option>
             <option>Assult rifle</option>
             <option>Submachine gun</option>
             <option>Marksman rifle</option>
@@ -32,30 +32,26 @@ const { toggleDisplayList, toggleShowFilterMenu } = trackerFilterStore
             <option>Pistol</option>
           </select>
         </div>
-        <div class="form-control">
-          <label class="label cursor-pointer">
-            <span class="label-text pr-4">Hide guilded</span>
-            <input type="checkbox" class="toggle" checked />
-          </label>
-        </div>
-        <div class="form-control">
-          <label class="label cursor-pointer">
-            <span class="label-text pr-4">Hide forged</span>
-            <input type="checkbox" class="toggle" checked />
-          </label>
-        </div>
-        <div class="form-control">
-          <label class="label cursor-pointer">
-            <span class="label-text pr-4">Hide priceless</span>
-            <input type="checkbox" class="toggle" checked />
-          </label>
-        </div>
-        <div class="form-control">
-          <label class="label cursor-pointer">
-            <span class="label-text pr-4">Hide interstellar</span>
-            <input type="checkbox" class="toggle" checked />
-          </label>
-        </div>
+        <div class="flex flex-col">
+  <div class="form-control w-64">
+    <label class="cursor-pointer label">
+      <span class="label-text text-2xl">Hide guilded</span> 
+      <input type="checkbox" class="toggle toggle-lg toggle-success" />
+    </label>
+  </div>
+  <div class="form-control w-64">
+    <label class="cursor-pointer label">
+      <span class="label-tex text-2xl">Hide forged</span> 
+      <input type="checkbox" class="toggle toggle-lg toggle-success" />
+    </label>
+  </div>
+  <div class="form-control w-64">
+    <label class="cursor-pointer label">
+      <span class="label-text text-2xl">Hide priceless</span> 
+      <input type="checkbox" class="toggle toggle-lg toggle-success" />
+    </label>
+  </div>
+</div>
       </div>
 
       <!-- Favorites and list/grid -->

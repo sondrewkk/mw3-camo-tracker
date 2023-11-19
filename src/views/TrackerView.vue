@@ -29,7 +29,7 @@ const groupedProgress = computed(() => {
 </script>
 
 <template>
-  <div>
+  <div class="min-h-screen">
     <TrackerFilter />
 
     <div class="flex flex-col px-2 pt-8">

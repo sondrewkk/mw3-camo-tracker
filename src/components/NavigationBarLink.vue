@@ -10,7 +10,7 @@ defineEmits(['click'])
   <router-link
     :to="to"
     class="font-bold text-xl hover:underline decoration-2 underline-offset-2"
-    active-class="text-gray-200"
+    active-class="text-gray-100 underline"
     @click="$emit('click')"
   >
     <slot></slot>

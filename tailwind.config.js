@@ -1,18 +1,20 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: [
-    './public/**/*.html',
-    './src/**/*.{js,jsx,ts,tsx,vue,png}',
-  ],
-  darkMode: 'media', // or 'media' or 'class'
-  theme: {
-    extend: {},
-  },
-  variants: {
-    extend: {},
-  },
-  plugins: [
-    require("daisyui"),
-  ],
-}
+export const content = [
+  './public/**/*.html',
+  './src/**/*.{js,jsx,ts,tsx,vue,png}',
+];
+export const darkMode = 'class';
+export const theme = {
+  extend: {},
+};
+export const variants = {
+  extend: {},
+};
+export const plugins = [
+  // eslint-disable-next-line no-undef
+  require("daisyui"),
+];
+export const daisyui = {
+  themes: ["dark"],
+};
 
