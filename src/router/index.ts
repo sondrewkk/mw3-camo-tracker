@@ -13,6 +13,11 @@ const router = createRouter({
       path: '/tracker',
       name: 'tracker',
       component: () => import('@/views/TrackerView.vue')
+    },
+    {
+      path: '/settings',
+      name: 'settings',
+      component: () => import('@/views/SettingsView.vue')
     }
   ]
 })

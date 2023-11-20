@@ -1,8 +1,27 @@
 import { defineStore } from 'pinia'
-import { useWeaponProgress } from '@/composeables/weaponProgress'
+import { useWeapons } from '@/composeables/weapon'
+import type { WeaponProgress } from '@/composeables/weaponProgress'
+import { useStorage } from '@vueuse/core'
 
-export const useWeaponProgressStore = defineStore('weaponProgress', () => {
-  const weaponProgress = useWeaponProgress().progress
+const STORE_NAME: string = 'weaponProgress'
+
+function loadDefaultProgress(): WeaponProgress[] {
+  const { weapons } = useWeapons()
+  return weapons.value.map((weapon) => ({
+    weaponName: weapon.name,
+    weaponCategory: weapon.category,
+    camofluages: weapon.camofluages.map((camo) => ({
+      camofluageName: camo.name,
+      achived: false
+    })),
+    progress: 0
+  })) as WeaponProgress[]
+}
+
+export const useWeaponProgressStore = defineStore(STORE_NAME, () => {
+  const weaponProgress = useStorage('progress', loadDefaultProgress(), localStorage, {
+    mergeDefaults: true
+  })
 
   function toggleCamofluageComplete(weaponName: string, camoName: string) {
     const weapon = weaponProgress.value.find((weapon) => weapon.weaponName === weaponName)
@@ -14,5 +33,9 @@ export const useWeaponProgressStore = defineStore('weaponProgress', () => {
     }
   }
 
-  return { weaponProgress, toggleCamofluageComplete }
+  function resetToDefault() {
+    weaponProgress.value = loadDefaultProgress()
+  }
+
+  return { weaponProgress, toggleCamofluageComplete, resetToDefault }
 })
