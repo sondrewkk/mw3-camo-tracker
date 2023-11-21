@@ -30,7 +30,7 @@ const groupedProgress = computed(() => {
 </script>
 
 <template>
-  <div class="min-h-screen">
+  <div class="min-h-screen pb-24">
     <TrackerFilter />
 
     <div role="alert" class="alert alert-warning mt-12">

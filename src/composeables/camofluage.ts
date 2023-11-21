@@ -1,6 +1,6 @@
 import { useWeapons } from '@/composeables/weapon'
 
-type CamofluageSet = 'DIGITAL' | 'OTHER'
+type CamofluageSet = 'DIGITAL' | 'SOLID' | 'OTHER'
 type CamofluageType = 'BASE' | 'COMPLETIONIST'
 type GameMode = 'MULTIPLAYER' | 'ZOMBIES'
 

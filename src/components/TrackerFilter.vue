@@ -58,7 +58,7 @@ const { toggleDisplayList, toggleShowFilterMenu } = trackerFilterStore
       <div class="flex justify-between space-x-4">
         <button class="btn btn-lg border-2 border-base-100 w-1/2 hover:border-gray-500 hover:bg-base-200">Favorites</button>
         <button class="btn btn-lg border-2 border-base-100 grow hover:border-gray-500 hover:bg-base-200" @click="toggleDisplayList">
-          {{ displayList ? 'List' : 'Grid' }}
+          {{ displayList ? 'Grid' : 'List' }}
         </button>
       </div>
     </div>

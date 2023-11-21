@@ -7,6 +7,7 @@ const STORE_NAME: string = 'weaponProgress'
 
 function loadDefaultProgress(): WeaponProgress[] {
   const { weapons } = useWeapons()
+  console.log(weapons.value)
   return weapons.value.map((weapon) => ({
     weaponName: weapon.name,
     weaponCategory: weapon.category,
@@ -18,9 +19,31 @@ function loadDefaultProgress(): WeaponProgress[] {
   })) as WeaponProgress[]
 }
 
+function mergeProgress(defaultProgress: WeaponProgress[], progress: WeaponProgress[]) {
+  return defaultProgress.map((defaultWeapon) => {
+    const weapon = progress.find((weapon) => weapon.weaponName === defaultWeapon.weaponName)
+    if (weapon) {
+      return {
+        ...defaultWeapon,
+        camofluages: defaultWeapon.camofluages.map((defaultCamo) => {
+          const camo = weapon.camofluages.find((camo) => camo.camofluageName === defaultCamo.camofluageName)
+          if (camo) {
+            return {
+              ...defaultCamo,
+              achived: camo.achived
+            }
+          }
+          return defaultCamo
+        })
+      }
+    }
+    return defaultWeapon
+  })
+}
+
 export const useWeaponProgressStore = defineStore(STORE_NAME, () => {
   const weaponProgress = useStorage('progress', loadDefaultProgress(), localStorage, {
-    mergeDefaults: true
+    mergeDefaults: (storeageValue, defaults) => mergeProgress(defaults, storeageValue)
   })
 
   function toggleCamofluageComplete(weaponName: string, camoName: string) {
