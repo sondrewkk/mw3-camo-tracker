@@ -7,7 +7,6 @@ const STORE_NAME: string = 'weaponProgress'
 
 function loadDefaultProgress(): WeaponProgress[] {
   const { weapons } = useWeapons()
-  console.log(weapons.value)
   return weapons.value.map((weapon) => ({
     weaponName: weapon.name,
     weaponCategory: weapon.category,
