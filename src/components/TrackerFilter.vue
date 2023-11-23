@@ -3,8 +3,16 @@ import { useTrackerFilterStore } from '@/stores/trackerFilterStore'
 import { storeToRefs } from 'pinia'
 
 const trackerFilterStore = useTrackerFilterStore()
-const { displayList, showFilterMenu, selectedCategory, categories } =
-  storeToRefs(trackerFilterStore)
+const {
+  displayList,
+  showFilterMenu,
+  selectedCategory,
+  categories,
+  hideGilded,
+  hideForged,
+  hidePriceless
+} = storeToRefs(trackerFilterStore)
+
 const { toggleDisplayList, toggleShowFilterMenu } = trackerFilterStore
 </script>
 
@@ -36,20 +44,24 @@ const { toggleDisplayList, toggleShowFilterMenu } = trackerFilterStore
         <div class="flex flex-col">
           <div class="form-control w-64">
             <label class="cursor-pointer label">
-              <span class="label-text text-2xl">Hide guilded</span>
-              <input type="checkbox" class="toggle toggle-lg toggle-success" />
+              <span class="label-text text-2xl">Hide gilded</span>
+              <input type="checkbox" class="toggle toggle-lg toggle-success" v-model="hideGilded" />
             </label>
           </div>
           <div class="form-control w-64">
             <label class="cursor-pointer label">
               <span class="label-tex text-2xl">Hide forged</span>
-              <input type="checkbox" class="toggle toggle-lg toggle-success" />
+              <input type="checkbox" class="toggle toggle-lg toggle-success" v-model="hideForged" />
             </label>
           </div>
           <div class="form-control w-64">
             <label class="cursor-pointer label">
               <span class="label-text text-2xl">Hide priceless</span>
-              <input type="checkbox" class="toggle toggle-lg toggle-success" />
+              <input
+                type="checkbox"
+                class="toggle toggle-lg toggle-success"
+                v-model="hidePriceless"
+              />
             </label>
           </div>
         </div>

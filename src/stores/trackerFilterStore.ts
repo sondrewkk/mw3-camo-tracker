@@ -1,7 +1,8 @@
 import { type WeaponCategory, useWeapons } from '@/composeables/weapon'
 import { defineStore, storeToRefs } from 'pinia'
-import { computed, ref } from 'vue'
-import { useWeaponProgressStore } from './weaponProgressStore'
+import { ref } from 'vue'
+import { useWeaponProgressStore } from '@/stores/weaponProgressStore'
+import { useFilter } from '@/composeables/filter'
 
 export const useTrackerFilterStore = defineStore('trackerFilter', () => {
   const weaponProgressStore = useWeaponProgressStore()
@@ -22,18 +23,19 @@ export const useTrackerFilterStore = defineStore('trackerFilter', () => {
     showFavorites.value = !showFavorites.value
   }
 
-  const selectedCategory = ref<WeaponCategory>('All')
   const { categories } = useWeapons()
+  const selectedCategory = ref<WeaponCategory>('All')
+  const hideGilded = ref(false)
+  const hideForged = ref(false)
+  const hidePriceless = ref(false)
 
-  const filteredProgress = computed(() => {
-    let filteredProgress = groupedProgress.value
-
-    if (selectedCategory.value !== 'All') {
-      filteredProgress = { [selectedCategory.value]: groupedProgress.value[selectedCategory.value] }
-    }
-
-    return filteredProgress
-  })
+  const { filteredProgress } = useFilter(
+    groupedProgress,
+    selectedCategory,
+    hideGilded,
+    hideForged,
+    hidePriceless
+  )
 
   return {
     displayList,
@@ -43,6 +45,9 @@ export const useTrackerFilterStore = defineStore('trackerFilter', () => {
     showFavorites,
     toggleShowFavorites,
     selectedCategory,
+    hideGilded,
+    hideForged,
+    hidePriceless,
     categories,
     filteredProgress
   }
