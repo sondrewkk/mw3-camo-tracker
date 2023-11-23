@@ -6,8 +6,8 @@ const { resetToDefault } = useWeaponProgressStore()
 
 const isModalOpen = ref(false)
 const confirmReset = () => {
-    resetToDefault()
-    isModalOpen.value = false
+  resetToDefault()
+  isModalOpen.value = false
 }
 </script>
 
@@ -23,7 +23,9 @@ const confirmReset = () => {
     <div v-if="isModalOpen" class="modal modal-open">
       <div class="modal-box">
         <h3 class="font-bold text-2xl">Warning</h3>
-        <p class="py-4 text-lg">Resetting progress cannot be undone. Are you sure you want to proceed?</p>
+        <p class="py-4 text-lg">
+          Resetting progress cannot be undone. Are you sure you want to proceed?
+        </p>
         <div class="modal-action">
           <button class="btn btn btn-error" @click="confirmReset">Confirm</button>
           <button class="btn" @click="isModalOpen = false">Cancel</button>

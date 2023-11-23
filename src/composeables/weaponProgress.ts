@@ -1,6 +1,5 @@
 import type { WeaponCategory } from '@/composeables/weapon'
 
-
 export interface CamofluageProgress {
   camofluageName: string
   achived: boolean

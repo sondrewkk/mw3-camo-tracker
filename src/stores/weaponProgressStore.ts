@@ -1,7 +1,8 @@
 import { defineStore } from 'pinia'
-import { useWeapons } from '@/composeables/weapon'
+import { useWeapons, type WeaponCategory } from '@/composeables/weapon'
 import type { WeaponProgress } from '@/composeables/weaponProgress'
 import { useStorage } from '@vueuse/core'
+import { computed } from 'vue'
 
 const STORE_NAME: string = 'weaponProgress'
 
@@ -25,7 +26,9 @@ function mergeProgress(defaultProgress: WeaponProgress[], progress: WeaponProgre
       return {
         ...defaultWeapon,
         camofluages: defaultWeapon.camofluages.map((defaultCamo) => {
-          const camo = weapon.camofluages.find((camo) => camo.camofluageName === defaultCamo.camofluageName)
+          const camo = weapon.camofluages.find(
+            (camo) => camo.camofluageName === defaultCamo.camofluageName
+          )
           if (camo) {
             return {
               ...defaultCamo,
@@ -40,10 +43,28 @@ function mergeProgress(defaultProgress: WeaponProgress[], progress: WeaponProgre
   })
 }
 
+function groupProgress(weaponProgress: WeaponProgress[]) {
+  return weaponProgress.reduce(
+    (grouped, weapon) => {
+      const key = weapon.weaponCategory
+
+      if (!grouped[key]) {
+        grouped[key] = []
+      }
+
+      ;(grouped[key] as WeaponProgress[]).push(weapon)
+      return grouped
+    },
+    {} as Partial<Record<WeaponCategory, typeof weaponProgress>>
+  )
+}
+
 export const useWeaponProgressStore = defineStore(STORE_NAME, () => {
   const weaponProgress = useStorage('progress', loadDefaultProgress(), localStorage, {
     mergeDefaults: (storeageValue, defaults) => mergeProgress(defaults, storeageValue)
   })
+
+  const groupedProgress = computed(() => groupProgress(weaponProgress.value))
 
   function toggleCamofluageComplete(weaponName: string, camoName: string) {
     const weapon = weaponProgress.value.find((weapon) => weapon.weaponName === weaponName)
@@ -59,5 +80,5 @@ export const useWeaponProgressStore = defineStore(STORE_NAME, () => {
     weaponProgress.value = loadDefaultProgress()
   }
 
-  return { weaponProgress, toggleCamofluageComplete, resetToDefault }
+  return { groupedProgress, toggleCamofluageComplete, resetToDefault }
 })
