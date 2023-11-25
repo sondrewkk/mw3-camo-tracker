@@ -3,26 +3,14 @@ import { defineStore, storeToRefs } from 'pinia'
 import { ref } from 'vue'
 import { useWeaponProgressStore } from '@/stores/weaponProgressStore'
 import { useFilter } from '@/composeables/filter'
+import { useToggle } from '@/composeables/toggle'
 
 export const useTrackerFilterStore = defineStore('trackerFilter', () => {
   const weaponProgressStore = useWeaponProgressStore()
   const { groupedProgress } = storeToRefs(weaponProgressStore)
-
-  const displayList = ref(false)
-  function toggleDisplayList() {
-    displayList.value = !displayList.value
-  }
-
-  const showFilterMenu = ref(false)
-  function toggleShowFilterMenu() {
-    showFilterMenu.value = !showFilterMenu.value
-  }
-
-  const showFavorites = ref(false)
-  function toggleShowFavorites() {
-    showFavorites.value = !showFavorites.value
-  }
-
+  const { value: displayList, toggle: toggleDisplayList } = useToggle()
+  const { value: showFilterMenu, toggle: toggleShowFilterMenu } = useToggle()
+  const { value: showFavorites, toggle: toggleShowFavorites } = useToggle()
   const { categories } = useWeapons()
   const selectedCategory = ref<WeaponCategory>('All')
   const hideGilded = ref(false)
