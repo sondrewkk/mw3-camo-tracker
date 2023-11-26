@@ -31,7 +31,7 @@ const { toggleCamofluageComplete, toggleFavorite } = useWeaponProgressStore()
             <ProgressCard
               :weapon-progress="weapon"
               :display-list="displayList"
-              @favorite-clicked="toggleFavorite(weapon.weaponName)"
+              @toggle-favorite="toggleFavorite(weapon.weaponName)"
               @toggle-camofluage-complete="
                 (camoName) => toggleCamofluageComplete(weapon.weaponName, camoName)
               "

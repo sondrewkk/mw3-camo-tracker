@@ -12,7 +12,7 @@ defineProps<{
 }>()
 
 const emit = defineEmits<{
-  (e: 'favorite-clicked'): void
+  (e: 'toggle-favorite'): void
   (e: 'toggle-camofluage-complete', camoName: string): void
 }>()
 </script>
@@ -21,9 +21,12 @@ const emit = defineEmits<{
   <div class="indicator w-full">
     <div
       class="indicator-item indicator-start translate-x-2 translate-y-2"
-      @click="emit('favorite-clicked')"
+      @click="$emit('toggle-favorite')"
     >
-      <HeartIcon class="h-8 w-8" :class="{ 'fill-secondary': weaponProgress.isFavorite }" />
+      <HeartIcon
+        class="h-8 w-8"
+        :class="weaponProgress.isFavorite ? 'fill-secondary' : 'fill-base-300 stroke-base-100'"
+      />
     </div>
     <div class="card border border-neutral bg-base-100 shadow-xl">
       <div class="card-body items-center py-0 px-2 mb-6">
