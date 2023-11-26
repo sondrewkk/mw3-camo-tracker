@@ -5,9 +5,11 @@ import { storeToRefs } from 'pinia'
 import ProgressCard from '@/components/ProgressCard.vue'
 import TrackerFilter from '@/components/TrackerFilter.vue'
 import { ExclamationTriangleIcon } from '@heroicons/vue/24/solid'
+import { useWeaponProgressStore } from '@/stores/weaponProgressStore'
 
 const trackerFilterStore = useTrackerFilterStore()
 const { displayList, filteredProgress } = storeToRefs(trackerFilterStore)
+const { toggleCamofluageComplete, toggleFavorite } = useWeaponProgressStore()
 </script>
 
 <template>
@@ -26,7 +28,14 @@ const { displayList, filteredProgress } = storeToRefs(trackerFilterStore)
         <h2 class="text-3xl font-bold">{{ category }}s</h2>
         <div class="flex flex-col space-y-8 pt-8">
           <ul v-for="weapon in weapons" :key="weapon.weaponName">
-            <ProgressCard :weapon-progress="weapon" :display-list="displayList" />
+            <ProgressCard
+              :weapon-progress="weapon"
+              :display-list="displayList"
+              @favorite-clicked="toggleFavorite(weapon.weaponName)"
+              @toggle-camofluage-complete="
+                (camoName) => toggleCamofluageComplete(weapon.weaponName, camoName)
+              "
+            />
           </ul>
         </div>
       </ul>

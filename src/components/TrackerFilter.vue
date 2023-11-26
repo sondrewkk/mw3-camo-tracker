@@ -6,6 +6,7 @@ const trackerFilterStore = useTrackerFilterStore()
 const {
   displayList,
   showFilterMenu,
+  showFavorites,
   selectedCategory,
   categories,
   hideGilded,
@@ -13,7 +14,7 @@ const {
   hidePriceless
 } = storeToRefs(trackerFilterStore)
 
-const { toggleDisplayList, toggleShowFilterMenu } = trackerFilterStore
+const { toggleDisplayList, toggleShowFilterMenu, toggleShowFavorites } = trackerFilterStore
 </script>
 
 <template>
@@ -70,7 +71,13 @@ const { toggleDisplayList, toggleShowFilterMenu } = trackerFilterStore
       <!-- Favorites and list/grid -->
       <div class="flex justify-between space-x-4">
         <button
-          class="btn btn-lg border-2 border-base-100 w-1/2 hover:border-gray-500 hover:bg-base-200"
+          class="btn btn-lg w-1/2"
+          :class="
+            showFavorites
+              ? 'btn-outline btn-secondary'
+              : 'border-2 border-base-100 hover:border-gray-500 hover:bg-base-200'
+          "
+          @click="toggleShowFavorites"
         >
           Favorites
         </button>

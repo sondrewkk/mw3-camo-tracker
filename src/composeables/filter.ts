@@ -1,62 +1,78 @@
-import { ref, computed, type ComputedRef, type Ref } from 'vue'
+import { computed, type Ref } from 'vue'
 import type { WeaponCategory } from './weapon'
 import type { WeaponProgress } from './weaponProgress'
 
+function group(progress: WeaponProgress[]) {
+  return progress.reduce(
+    (grouped, weapon) => {
+      const key = weapon.weaponCategory
+
+      if (!grouped[key]) {
+        grouped[key] = []
+      }
+
+      ;(grouped[key] as WeaponProgress[]).push(weapon)
+      return grouped
+    },
+    {} as Partial<Record<WeaponCategory, typeof progress>>
+  )
+}
+
+function filterByCategory(progress: WeaponProgress[], category: WeaponCategory) {
+  return progress.filter((weapon) => weapon.weaponCategory === category)
+}
+
+function filterFavorites(progress: WeaponProgress[]) {
+  return progress.filter((weapon) => weapon.isFavorite)
+}
+
+function filterCamo(progress: WeaponProgress[], camoName: string) {
+  return progress.filter((weapon) => {
+    const camo = weapon.camofluages.find((camo) => camo.camofluageName === camoName)
+    return !(camo && camo.achived)
+  })
+}
+
 export function useFilter(
-  groupedProgress: ComputedRef<Partial<Record<WeaponCategory, WeaponProgress[]>>>,
+  weaponProgress: Ref<WeaponProgress[]>,
   selectedCategory: Ref<WeaponCategory>,
+  showFavorites: Ref<boolean>,
   hideGilded: Ref<boolean>,
   hideForged: Ref<boolean>,
   hidePriceless: Ref<boolean>
 ) {
-  const displayList = ref(false)
-
-  function filterByCamo(
-    filteredProgress: Partial<Record<WeaponCategory, WeaponProgress[]>>,
-    camoName: string
-  ) {
-    return Object.fromEntries(
-      Object.entries(filteredProgress).map(([key, value]) => {
-        return [
-          key,
-          value.filter((weapon) => {
-            const camo = weapon.camofluages.find((camo) => camo.camofluageName === camoName)
-            return !(camo && camo.achived)
-          })
-        ]
-      })
-    )
-  }
-
   const filteredProgress = computed(() => {
-    let filteredProgress = groupedProgress.value
+    const initialProgress = weaponProgress.value
+    const isCategorySelected = selectedCategory.value !== 'All'
+    const isFavoriteSelected = showFavorites.value
+    const isHidingGilded = hideGilded.value
+    const isHidingForged = hideForged.value
+    const isHidingPriceless = hidePriceless.value
 
-    if (selectedCategory.value !== 'All') {
-      filteredProgress = { [selectedCategory.value]: groupedProgress.value[selectedCategory.value] }
-    }
+    const categoryFilteredProgress = isCategorySelected
+      ? filterByCategory(initialProgress, selectedCategory.value)
+      : initialProgress
 
-    if (hideGilded.value) {
-      filteredProgress = filterByCamo(filteredProgress, 'Gilded')
-    }
+    const favoriteFilteredProgress = isFavoriteSelected
+      ? filterFavorites(categoryFilteredProgress)
+      : categoryFilteredProgress
 
-    if (hideForged.value) {
-      filteredProgress = filterByCamo(filteredProgress, 'Forged')
-    }
+    const gildedFilteredProgress = isHidingGilded
+      ? filterCamo(favoriteFilteredProgress, 'Gilded')
+      : favoriteFilteredProgress
 
-    if (hidePriceless.value) {
-      filteredProgress = filterByCamo(filteredProgress, 'Priceless')
-    }
+    const forgedFilteredProgress = isHidingForged
+      ? filterCamo(gildedFilteredProgress, 'Forged')
+      : gildedFilteredProgress
 
-    // Filter out categories with an empty progress array
-    filteredProgress = Object.fromEntries(
-      Object.entries(filteredProgress).filter(([, value]) => value.length > 0)
-    )
+    const pricelessFilteredProgress = isHidingPriceless
+      ? filterCamo(forgedFilteredProgress, 'Priceless')
+      : forgedFilteredProgress
 
-    return filteredProgress
+    return group(pricelessFilteredProgress)
   })
 
   return {
-    displayList,
     filteredProgress
   }
 }

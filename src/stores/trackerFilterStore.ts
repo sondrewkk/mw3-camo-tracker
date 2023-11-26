@@ -7,7 +7,7 @@ import { useToggle } from '@/composeables/toggle'
 
 export const useTrackerFilterStore = defineStore('trackerFilter', () => {
   const weaponProgressStore = useWeaponProgressStore()
-  const { groupedProgress } = storeToRefs(weaponProgressStore)
+  const { weaponProgress } = storeToRefs(weaponProgressStore)
   const { value: displayList, toggle: toggleDisplayList } = useToggle()
   const { value: showFilterMenu, toggle: toggleShowFilterMenu } = useToggle()
   const { value: showFavorites, toggle: toggleShowFavorites } = useToggle()
@@ -18,8 +18,9 @@ export const useTrackerFilterStore = defineStore('trackerFilter', () => {
   const hidePriceless = ref(false)
 
   const { filteredProgress } = useFilter(
-    groupedProgress,
+    weaponProgress,
     selectedCategory,
+    showFavorites,
     hideGilded,
     hideForged,
     hidePriceless

@@ -11,11 +11,13 @@ const getCamoImgUrl = (name: string) => {
   return new URL(`../assets/camo/${formattedName}.png`, import.meta.url).href
 }
 
-defineEmits(['toggleCamo'])
+const emit = defineEmits<{
+  (e: 'clicked'): void
+}>()
 </script>
 
 <template>
-  <button @click="$emit('toggleCamo')" class="relative">
+  <button @click="emit('clicked')" class="relative">
     <div class="bg-black rounded">
       <img
         class="rounded"

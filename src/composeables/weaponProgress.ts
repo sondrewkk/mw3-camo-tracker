@@ -8,6 +8,7 @@ export interface CamofluageProgress {
 export interface WeaponProgress {
   weaponName: string
   weaponCategory: WeaponCategory
+  isFavorite: boolean
   camofluages: CamofluageProgress[]
   progress: number
 }
