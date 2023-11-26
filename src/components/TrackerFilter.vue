@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useTrackerFilterStore } from '@/stores/trackerFilterStore'
 import { storeToRefs } from 'pinia'
+import { HeartIcon, EllipsisHorizontalIcon, EllipsisVerticalIcon } from '@heroicons/vue/24/solid';
 
 const trackerFilterStore = useTrackerFilterStore()
 const {
@@ -80,12 +81,20 @@ const { toggleDisplayList, toggleShowFilterMenu, toggleShowFavorites } = tracker
           @click="toggleShowFavorites"
         >
           Favorites
+          <HeartIcon class="w-6 h-6" />
         </button>
         <button
           class="btn btn-lg border-2 border-base-100 grow hover:border-gray-500 hover:bg-base-200"
           @click="toggleDisplayList"
         >
-          {{ displayList ? 'Grid' : 'List' }}
+          <template v-if="displayList">
+            Grid
+            <EllipsisHorizontalIcon class="w-6 h-6" />
+          </template>
+          <template v-else>
+            List
+            <EllipsisVerticalIcon class="w-6 h-6" />
+          </template>
         </button>
       </div>
     </div>
