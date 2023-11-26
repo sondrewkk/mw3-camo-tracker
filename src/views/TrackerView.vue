@@ -1,9 +1,9 @@
 <script setup lang="ts">
-// import { useWeaponProgressStore } from '@/stores/weaponProgressStore'
 import { useTrackerFilterStore } from '@/stores/trackerFilterStore'
 import { storeToRefs } from 'pinia'
 import ProgressCard from '@/components/ProgressCard.vue'
 import TrackerFilter from '@/components/TrackerFilter.vue'
+import ProgressBar from '@/components/ProgressBar.vue'
 import { ExclamationTriangleIcon } from '@heroicons/vue/24/solid'
 import { useWeaponProgressStore } from '@/stores/weaponProgressStore'
 
@@ -40,5 +40,8 @@ const { toggleCamofluageComplete, toggleFavorite } = useWeaponProgressStore()
         </div>
       </ul>
     </div>
+
+    <ProgressBar />
+
   </div>
 </template>
