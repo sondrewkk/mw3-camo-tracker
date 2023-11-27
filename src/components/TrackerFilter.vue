@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useTrackerFilterStore } from '@/stores/trackerFilterStore'
 import { storeToRefs } from 'pinia'
-import { HeartIcon, EllipsisHorizontalIcon, EllipsisVerticalIcon } from '@heroicons/vue/24/solid';
+import { HeartIcon, EllipsisHorizontalIcon, EllipsisVerticalIcon } from '@heroicons/vue/24/solid'
 
 const trackerFilterStore = useTrackerFilterStore()
 const {

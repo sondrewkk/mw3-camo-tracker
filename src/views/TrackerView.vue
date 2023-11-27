@@ -42,6 +42,5 @@ const { toggleCamofluageComplete, toggleFavorite } = useWeaponProgressStore()
     </div>
 
     <ProgressBar />
-
   </div>
 </template>

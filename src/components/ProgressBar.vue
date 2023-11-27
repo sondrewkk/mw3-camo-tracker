@@ -1,11 +1,21 @@
 <script setup lang="ts">
 import { useRoute } from 'vue-router'
-import { computed, ref } from 'vue'
+import { computed } from 'vue'
+import { useWeaponProgressStore } from '@/stores/weaponProgressStore'
+import { useWeapons } from '@/composeables/weapon'
 
 const route = useRoute()
 const showBar = computed(() => route.path === '/tracker')
+const weaponProgressStore = useWeaponProgressStore()
+const { totalCamofluages } = useWeapons()
 
-const currentProgress = ref(50)
+const totalAchivedCamos = computed(() => {
+  return weaponProgressStore.getSumOfAllAchivedCamofluages()
+})
+
+const currentProgress = computed(() => {
+  return (totalAchivedCamos.value / totalCamofluages.value) * 100
+})
 </script>
 
 <template>
@@ -21,7 +31,7 @@ const currentProgress = ref(50)
     </div>
 
     <div class="absolute inset-0 flex items-center justify-center">
-      <span class="text-sm font-medium">{{ currentProgress }}%</span>
+      <span class="text-sm font-medium">{{ totalAchivedCamos }} of {{ totalCamofluages }}</span>
     </div>
   </div>
 </template>

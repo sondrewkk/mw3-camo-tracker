@@ -70,5 +70,22 @@ export const useWeaponProgressStore = defineStore(STORE_NAME, () => {
     weaponProgress.value = loadDefaultProgress()
   }
 
-  return { weaponProgress, toggleCamofluageComplete, toggleFavorite, resetToDefault }
+  const getSumOfAllAchivedCamofluages = () => {
+    return weaponProgress.value.reduce((sum, weapon) => {
+      return (
+        sum +
+        weapon.camofluages.reduce((sum, camo) => {
+          return sum + (camo.achived ? 1 : 0)
+        }, 0)
+      )
+    }, 0)
+  }
+
+  return {
+    weaponProgress,
+    toggleCamofluageComplete,
+    toggleFavorite,
+    resetToDefault,
+    getSumOfAllAchivedCamofluages
+  }
 })
