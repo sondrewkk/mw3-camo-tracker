@@ -2,6 +2,7 @@
 import { useTrackerFilterStore } from '@/stores/trackerFilterStore'
 import { storeToRefs } from 'pinia'
 import { HeartIcon, EllipsisHorizontalIcon, EllipsisVerticalIcon } from '@heroicons/vue/24/solid'
+import FilterButton from './FilterButton.vue'
 
 const trackerFilterStore = useTrackerFilterStore()
 const {
@@ -19,16 +20,58 @@ const { toggleDisplayList, toggleShowFilterMenu, toggleShowFavorites } = tracker
 </script>
 
 <template>
-  <div class="px-2 pt-6">
-    <div class="flex flex-col space-y-4">
-      <button
-        class="btn btn-lg border-2 border-base-100 hover:border-gray-500 hover:bg-base-200"
-        @click="toggleShowFilterMenu"
-      >
-        {{ showFilterMenu ? 'Hide' : 'Show' }} Filters
-      </button>
+  <div class="border border-white/5 flex flex-col items-center md:flex-row md:justify-between">
+    <!-- Show/Hide filter button -->
+    <FilterButton @clicked="toggleShowFilterMenu" class="w-full md:hidden">
+      {{ showFilterMenu ? 'Hide' : 'Show' }} Filters
+    </FilterButton>
 
-      <!-- Filter menu -->
+    <!-- filter menu -->
+    
+      <!-- Weapon category selection filter -->
+      <div class="form-control w-full md:max-w-xs">
+        <label class="label">
+          <span class="label-text text-lg md:text-lg
+          ">Category</span>
+        </label>
+        <select class="select select-bordered select-lg md:select-sm" v-model="selectedCategory">
+          <option v-for="category in categories" :key="category" :value="category">
+            {{ category }}
+          </option>
+        </select>
+      </div>
+
+      <div class="form-control">
+        <label class="cursor-pointer label">
+          <span class="label-text text-2xl md:text-lg">Hide gilded</span>
+          <input type="checkbox" class="toggle toggle-lg toggle-success" v-model="hideGilded" />
+        </label>
+      </div>
+
+      <div class="form-control">
+        <label class="cursor-pointer label">
+          <span class="label-tex text-2xl">Hide forged</span>
+          <input type="checkbox" class="toggle toggle-lg toggle-success" v-model="hideForged" />
+        </label>
+      </div>
+
+      <div class="form-control">
+        <label class="cursor-pointer label">
+          <span class="label-text text-2xl">Hide priceless</span>
+          <input
+            type="checkbox"
+            class="toggle toggle-lg toggle-success"
+            v-model="hidePriceless"
+          />
+        </label>
+      </div>
+       
+
+    
+
+    <!--
+
+      Filter mobile menu 
       <div
         :class="showFilterMenu ? 'flex h-screen' : 'hidden'"
         class="flex flex-col space-y-6 items-center"
@@ -69,7 +112,17 @@ const { toggleDisplayList, toggleShowFilterMenu, toggleShowFavorites } = tracker
         </div>
       </div>
 
-      <!-- Favorites and list/grid -->
+
+
+
+
+
+
+
+
+
+
+       Favorites and list/grid 
       <div class="flex justify-between space-x-4">
         <button
           class="btn btn-lg w-1/2"
@@ -96,7 +149,6 @@ const { toggleDisplayList, toggleShowFilterMenu, toggleShowFavorites } = tracker
             <EllipsisVerticalIcon class="w-6 h-6" />
           </template>
         </button>
-      </div>
-    </div>
+      </div> -->
   </div>
 </template>
