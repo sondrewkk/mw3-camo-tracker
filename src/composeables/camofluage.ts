@@ -21,5 +21,9 @@ export function useCamo() {
     return camofluages.find((camofluage) => camofluage.name === camoName)?.challenge
   }
 
-  return { getCamofluageChallenge }
+  const getCamofluageType = (camoName: string) => {
+    return camofluages.find((camofluage) => camofluage.name === camoName)?.type
+  }
+
+  return { getCamofluageChallenge, getCamofluageType }
 }

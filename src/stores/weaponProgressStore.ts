@@ -2,6 +2,7 @@ import { defineStore } from 'pinia'
 import { useWeapons } from '@/composeables/weapon'
 import type { WeaponProgress } from '@/composeables/weaponProgress'
 import { useStorage } from '@vueuse/core'
+import { useCamo } from '@/composeables/camofluage'
 
 const STORE_NAME: string = 'weaponProgress'
 
@@ -55,6 +56,18 @@ export const useWeaponProgressStore = defineStore(STORE_NAME, () => {
       const camo = weapon.camofluages.find((camo) => camo.camofluageName === camoName)
       if (camo) {
         camo.achived = !camo.achived
+      
+        // If a camo of type COMPLETIONIST is achived, achive all camos before the camo clicked
+        const { getCamofluageType } = useCamo()
+        const camoType = getCamofluageType(camo.camofluageName)
+
+        if (camoType === 'COMPLETIONIST') {
+          let i = 0
+          while (weapon.camofluages[i].camofluageName !== camo.camofluageName) {
+            weapon.camofluages[i].achived = true
+            i++
+          }
+        }
       }
     }
   }
