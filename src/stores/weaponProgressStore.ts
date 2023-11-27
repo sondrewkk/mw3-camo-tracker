@@ -56,7 +56,7 @@ export const useWeaponProgressStore = defineStore(STORE_NAME, () => {
       const camo = weapon.camofluages.find((camo) => camo.camofluageName === camoName)
       if (camo) {
         camo.achived = !camo.achived
-      
+
         // If a camo of type COMPLETIONIST is achived, achive all camos before the camo clicked
         const { getCamofluageType } = useCamo()
         const camoType = getCamofluageType(camo.camofluageName)
