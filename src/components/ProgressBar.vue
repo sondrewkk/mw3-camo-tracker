@@ -25,7 +25,7 @@ const currentProgress = computed(() => {
   >
     <div
       :style="{ width: currentProgress + '%' }"
-      class="h-12 relative overflow-hidden bg-gradient-to-r from-secondary-focus via-secondary to-secondary-focus"
+      class="h-12 relative overflow-hidden bg-gradient-to-r from-secondary-focus via-secondary to-secondary-focus transition-all duration-500 ease-in-out"
     >
       <div class="h-full wave-animation"></div>
     </div>
