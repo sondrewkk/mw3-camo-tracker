@@ -17,7 +17,7 @@ const emit = defineEmits<{
 </script>
 
 <template>
-  <button @click="emit('clicked')" class="relative">
+  <!-- <button @click="emit('clicked')" class="relative">
     <div class="bg-black rounded">
       <img
         class="rounded transition-opacity duration-2000 ease-in-out"
@@ -25,10 +25,16 @@ const emit = defineEmits<{
         :src="getCamoImgUrl(progress.camofluageName)"
         :alt="progress.camofluageName"
       />
-      <CheckIcon
+       <CheckIcon
         class="absolute bottom-0 stroke-green-500 stroke-2 transition-opacity duration-2000 ease-in-out"
         :class="progress.achived ? 'opacity-100' : 'opacity-0'"
       />
     </div>
-  </button>
+  </button> -->
+  <img
+    class="rounded"
+    :src="getCamoImgUrl(progress.camofluageName)"
+    :alt="progress.camofluageName"
+    @click="emit('clicked')"
+  />
 </template>
