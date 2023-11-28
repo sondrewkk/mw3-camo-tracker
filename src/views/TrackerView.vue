@@ -14,7 +14,7 @@ const { toggleCamofluageComplete, toggleFavorite } = useWeaponProgressStore()
 <template>
   <TrackerFilter />
 
-  <div class="flex flex-col space-y-24 mt-12">
+  <div class="flex flex-col space-y-24 mt-12 pb-20">
     <div class="" v-for="(weapons, category) in filteredProgress" :key="category">
       <h2 class="text-3xl md:text-2xl font-bold">{{ category }}s</h2>
 

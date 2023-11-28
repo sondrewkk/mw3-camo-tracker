@@ -5,7 +5,7 @@ const emit = defineEmits<{
 </script>
 
 <template>
-  <button class="btn bg-base-100 border-neutral" @click="emit('clicked')">
+  <button class="btn btn-active bg-base-100 border border-neutral/75" @click="emit('clicked')">
     <slot></slot>
   </button>
 </template>

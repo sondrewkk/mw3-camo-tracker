@@ -28,11 +28,6 @@ const { toggleDisplayList, toggleShowFilterMenu, toggleShowFavorites } = tracker
     <FilterButton
       @clicked="toggleShowFavorites"
       class="min-w-1/3 grow"
-      :class="
-        showFavorites
-          ? 'btn-outline text-secondary'
-          : 'border-2 border-base-100 hover:border-gray-500 hover:bg-base-200 hover:text-secondary'
-      "
     >
       Favorites
       <HeartIcon class="w-6 h-6" :class="{ 'fill-secondary': showFavorites }" />

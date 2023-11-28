@@ -7,7 +7,7 @@ import NavigationBar from '@/components/NavigationBar.vue'
   <div class="w-full bg-base-300 text-base-content min-h-screen">
     <div class="container mx-auto max-w-8xl">
       <NavigationBar />
-      <div class="px-4 py-4">
+      <div class="px-4">
         <main>
           <RouterView />
         </main>
