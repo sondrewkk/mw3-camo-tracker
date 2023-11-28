@@ -5,7 +5,7 @@ import NavigationBar from '@/components/NavigationBar.vue'
 
 <template>
   <div class="w-full bg-base-200">
-    <div class="container mx-auto max-w-6xl">
+    <div class="container mx-auto max-w-8xl">
       <NavigationBar />
       <div class="px-4 py-4">
         <main>

@@ -12,15 +12,18 @@ const { toggleCamofluageComplete, toggleFavorite } = useWeaponProgressStore()
 </script>
 
 <template>
-  <div class="min-h-screen pb-12">
     <TrackerFilter />
 
-    <div class="flex flex-col px-2 mt-12">
-      <ul class="pb-20" v-for="(weapons, category) in filteredProgress" :key="category">
+    <div class="border border-white/5 flex flex-col space-y-24 mt-12">
+      
+      <div class="" v-for="(weapons, category) in filteredProgress" :key="category">
         <h2 class="text-3xl font-bold">{{ category }}s</h2>
-        <div class="flex flex-col space-y-8 pt-8">
-          <ul v-for="weapon in weapons" :key="weapon.weaponName">
+        
+        <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 pt-8">
+          
+          <div v-for="weapon in weapons" :key="weapon.weaponName" class="">
             <ProgressCard
+              class=""
               :weapon-progress="weapon"
               :display-list="displayList"
               @toggle-favorite="toggleFavorite(weapon.weaponName)"
@@ -28,11 +31,11 @@ const { toggleCamofluageComplete, toggleFavorite } = useWeaponProgressStore()
                 (camoName) => toggleCamofluageComplete(weapon.weaponName, camoName)
               "
             />
-          </ul>
+          </div>
         </div>
-      </ul>
+      </div>
     </div>
 
     <ProgressBar />
-  </div>
+
 </template>
