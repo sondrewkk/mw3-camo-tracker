@@ -9,4 +9,3 @@ const emit = defineEmits<{
     <slot></slot>
   </button>
 </template>
-

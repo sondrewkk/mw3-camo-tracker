@@ -32,11 +32,10 @@ const emit = defineEmits<{
       </div>
       <div class="flex gap-1 mt-4" :class="{ 'flex-col gap-y-2': displayList }">
         <div v-for="camo in weaponProgress.camofluages" :key="camo.camofluageName">
-          <div class="flex gap-4 items-center"
-          >
+          <div class="flex gap-4 items-center">
             <CamoImg
               class=""
-              :class="{ 'flex-none w-10': displayList}"
+              :class="{ 'flex-none w-10': displayList }"
               :progress="camo"
               @clicked="emit('toggle-camofluage-complete', camo.camofluageName)"
             />
