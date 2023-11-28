@@ -36,7 +36,7 @@ const toggleShowMenu = () => {
     <!-- Mobile menu-->
     <div v-if="showMenu">
       <div
-        class="flex flex-col items-center text-2xl space-y-8 py-8 bg-gradient-to-b from-base-200 to-base-300"
+        class="flex flex-col items-center text-2xl space-y-8 py-8"
       >
         <NavigationBarLink to="/" @click="toggleShowMenu">Home</NavigationBarLink>
         <NavigationBarLink to="/tracker" @click="toggleShowMenu">Tracker</NavigationBarLink>
