@@ -20,135 +20,102 @@ const { toggleDisplayList, toggleShowFilterMenu, toggleShowFavorites } = tracker
 </script>
 
 <template>
-  <div class="border border-white/5 flex flex-col items-center md:flex-row md:justify-between">
-    <!-- Show/Hide filter button -->
-    <FilterButton @clicked="toggleShowFilterMenu" class="w-full md:hidden">
-      {{ showFilterMenu ? 'Hide' : 'Show' }} Filters
+  <FilterButton @clicked="toggleShowFilterMenu" class="md:hidden w-full">
+    {{ showFilterMenu ? 'Hide' : 'Show' }} Filters
+  </FilterButton>
+
+  <div class="flex space-x-4 pt-4 md:hidden">
+    <FilterButton
+      @clicked="toggleShowFavorites"
+      class="min-w-1/3 grow"
+      :class="
+        showFavorites
+          ? 'btn-outline text-secondary'
+          : 'border-2 border-base-100 hover:border-gray-500 hover:bg-base-200 hover:text-secondary'
+      "
+    >
+      Favorites
+      <HeartIcon class="w-6 h-6" :class="{ 'fill-secondary': showFavorites }" />
     </FilterButton>
 
-    <!-- filter menu -->
-    
-      <!-- Weapon category selection filter -->
-      <div class="form-control w-full md:max-w-xs">
-        <label class="label">
-          <span class="label-text text-lg md:text-lg
-          ">Category</span>
-        </label>
-        <select class="select select-bordered select-lg md:select-sm" v-model="selectedCategory">
-          <option v-for="category in categories" :key="category" :value="category">
-            {{ category }}
-          </option>
-        </select>
-      </div>
+    <FilterButton @clicked="toggleDisplayList" class="w-1/2 shrink">
+      <template v-if="displayList">
+        Grid
+        <EllipsisHorizontalIcon class="w-6 h-6" />
+      </template>
+      <template v-else>
+        List
+        <EllipsisVerticalIcon class="w-6 h-6" />
+      </template>
+    </FilterButton>
+  </div>
 
-      <div class="form-control">
-        <label class="cursor-pointer label">
-          <span class="label-text text-2xl md:text-lg">Hide gilded</span>
-          <input type="checkbox" class="toggle toggle-lg toggle-success" v-model="hideGilded" />
-        </label>
-      </div>
+  <div
+    class="space-y-8 pt-8 pb-4 px-4 md:flex md:place-items-end md:space-x-4"
+    :class="{ hidden: !showFilterMenu, block: showFilterMenu }"
+  >
+    <div class="form-control">
+      <label class="label">
+        <span class="label-text text-2xl md:text-xs">Category</span>
+      </label>
+      <select class="select select-bordered select-lg md:select-xs" v-model="selectedCategory">
+        <option v-for="category in categories" :key="category" :value="category">
+          {{ category }}
+        </option>
+      </select>
+    </div>
 
-      <div class="form-control">
-        <label class="cursor-pointer label">
-          <span class="label-tex text-2xl">Hide forged</span>
-          <input type="checkbox" class="toggle toggle-lg toggle-success" v-model="hideForged" />
-        </label>
-      </div>
+    <div class="form-control">
+      <label class="cursor-pointer label">
+        <span class="label-text text-2xl md:text-xs md:pr-4">Hide gilded</span>
+        <input
+          type="checkbox"
+          class="toggle toggle-lg md:toggle-sm toggle-success"
+          v-model="hideGilded"
+        />
+      </label>
+    </div>
 
-      <div class="form-control">
-        <label class="cursor-pointer label">
-          <span class="label-text text-2xl">Hide priceless</span>
-          <input
-            type="checkbox"
-            class="toggle toggle-lg toggle-success"
-            v-model="hidePriceless"
-          />
-        </label>
-      </div>
-       
+    <div class="form-control">
+      <label class="cursor-pointer label">
+        <span class="label-text text-2xl md:text-xs md:pr-4">Hide forged</span>
+        <input
+          type="checkbox"
+          class="toggle toggle-lg md:toggle-sm toggle-success"
+          v-model="hideForged"
+        />
+      </label>
+    </div>
 
-    
+    <div class="form-control">
+      <label class="cursor-pointer label">
+        <span class="label-text text-2xl md:text-xs md:pr-4">Hide priceless</span>
+        <input
+          type="checkbox"
+          class="toggle toggle-lg md:toggle-sm toggle-success"
+          v-model="hidePriceless"
+        />
+      </label>
+    </div>
 
-    <!--
+    <div class="grow"></div>
 
-      Filter mobile menu 
-      <div
-        :class="showFilterMenu ? 'flex h-screen' : 'hidden'"
-        class="flex flex-col space-y-6 items-center"
-      >
-        <div class="form-control w-full px-2">
-          <label class="label">
-            <span class="lavel-text text-lg">Category</span>
-          </label>
-          <select class="select select-bordered select-lg w-full" v-model="selectedCategory">
-            <option v-for="category in categories" :key="category" :value="category">
-              {{ category }}
-            </option>
-          </select>
-        </div>
-        <div class="flex flex-col">
-          <div class="form-control w-64">
-            <label class="cursor-pointer label">
-              <span class="label-text text-2xl">Hide gilded</span>
-              <input type="checkbox" class="toggle toggle-lg toggle-success" v-model="hideGilded" />
-            </label>
-          </div>
-          <div class="form-control w-64">
-            <label class="cursor-pointer label">
-              <span class="label-tex text-2xl">Hide forged</span>
-              <input type="checkbox" class="toggle toggle-lg toggle-success" v-model="hideForged" />
-            </label>
-          </div>
-          <div class="form-control w-64">
-            <label class="cursor-pointer label">
-              <span class="label-text text-2xl">Hide priceless</span>
-              <input
-                type="checkbox"
-                class="toggle toggle-lg toggle-success"
-                v-model="hidePriceless"
-              />
-            </label>
-          </div>
-        </div>
-      </div>
+    <FilterButton
+      class="btn btn-square btn-sm hidden md:inline-flex"
+      @clicked="toggleShowFavorites"
+    >
+      <HeartIcon class="h-4 w-4" :class="{ 'fill-secondary': showFavorites }" />
+    </FilterButton>
 
-
-
-
-
-
-
-
-
-
-
-       Favorites and list/grid 
-      <div class="flex justify-between space-x-4">
-        <button
-          class="btn btn-lg w-1/2"
-          :class="
-            showFavorites
-              ? 'btn-outline btn-secondary'
-              : 'border-2 border-base-100 hover:border-gray-500 hover:bg-base-200'
-          "
-          @click="toggleShowFavorites"
-        >
-          Favorites
-          <HeartIcon class="w-6 h-6" />
-        </button>
-        <button
-          class="btn btn-lg border-2 border-base-100 grow hover:border-gray-500 hover:bg-base-200"
-          @click="toggleDisplayList"
-        >
-          <template v-if="displayList">
-            Grid
-            <EllipsisHorizontalIcon class="w-6 h-6" />
-          </template>
-          <template v-else>
-            List
-            <EllipsisVerticalIcon class="w-6 h-6" />
-          </template>
-        </button>
-      </div> -->
+    <FilterButton class="btn btn-sm w-24 hidden md:inline-flex" @clicked="toggleDisplayList">
+      <template v-if="displayList">
+        Grid
+        <EllipsisHorizontalIcon class="w-6 h-6" />
+      </template>
+      <template v-else>
+        List
+        <EllipsisVerticalIcon class="w-6 h-6" />
+      </template>
+    </FilterButton>
   </div>
 </template>
