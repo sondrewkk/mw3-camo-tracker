@@ -63,7 +63,7 @@ export const useWeaponProgressStore = defineStore(STORE_NAME, () => {
 
         if (camoType === 'COMPLETIONIST') {
           let i = 0
-          while (weapon.camofluages[i].camofluageName !== camo.camofluageName) {
+          while (weapon.camofluages[i].camofluageName !== camo.camofluageName) { // TODO: only change status if not achoved
             weapon.camofluages[i].achived = true
             i++
           }
