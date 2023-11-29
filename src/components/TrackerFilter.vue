@@ -46,14 +46,14 @@ const { toggleDisplayList, toggleShowFilterMenu, toggleShowFavorites } = tracker
   </div>
 
   <div
-    class="space-y-8 pt-8 pb-4 px-4 md:flex md:place-items-end md:space-x-4"
+    class="space-y-8 pb-4 md:flex md:place-items-end md:space-x-4"
     :class="{ hidden: !showFilterMenu, block: showFilterMenu }"
   >
-    <div class="form-control">
+    <div class="form-control mt-12">
       <label class="label">
-        <span class="label-text text-2xl md:text-xs">Category</span>
+        <span class="label-text text-xl md:text-xs">Category</span>
       </label>
-      <select class="select select-bordered select-lg md:select-xs" v-model="selectedCategory">
+      <select class="select select-bordered select-md md:select-xs" v-model="selectedCategory">
         <option v-for="category in categories" :key="category" :value="category">
           {{ category }}
         </option>
@@ -62,10 +62,10 @@ const { toggleDisplayList, toggleShowFilterMenu, toggleShowFavorites } = tracker
 
     <div class="form-control">
       <label class="cursor-pointer label">
-        <span class="label-text text-2xl md:text-xs md:pr-4">Hide gilded</span>
+        <span class="label-text text-xl md:text-xs md:pr-4">Hide gilded</span>
         <input
           type="checkbox"
-          class="toggle toggle-lg md:toggle-sm toggle-success"
+          class="toggle toggle-md md:toggle-sm toggle-success"
           v-model="hideGilded"
         />
       </label>
@@ -73,10 +73,10 @@ const { toggleDisplayList, toggleShowFilterMenu, toggleShowFavorites } = tracker
 
     <div class="form-control">
       <label class="cursor-pointer label">
-        <span class="label-text text-2xl md:text-xs md:pr-4">Hide forged</span>
+        <span class="label-text text-xl md:text-xs md:pr-4">Hide forged</span>
         <input
           type="checkbox"
-          class="toggle toggle-lg md:toggle-sm toggle-success"
+          class="toggle toggle-md md:toggle-sm toggle-success"
           v-model="hideForged"
         />
       </label>
@@ -84,10 +84,10 @@ const { toggleDisplayList, toggleShowFilterMenu, toggleShowFavorites } = tracker
 
     <div class="form-control">
       <label class="cursor-pointer label">
-        <span class="label-text text-2xl md:text-xs md:pr-4">Hide priceless</span>
+        <span class="label-text text-xl md:text-xs md:pr-4">Hide priceless</span>
         <input
           type="checkbox"
-          class="toggle toggle-lg md:toggle-sm toggle-success"
+          class="toggle toggle-md md:toggle-sm toggle-success"
           v-model="hidePriceless"
         />
       </label>

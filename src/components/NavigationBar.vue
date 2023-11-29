@@ -11,13 +11,13 @@ const toggleShowMenu = () => {
 
 <template>
   <nav>
-    <div class="px-4 py-4">
+    <div class="px-4 py-4 mb-8">
       <div class="flex justify-between z-20">
-        <router-link to="/" class="text-xl font-bold flex-none"
+        <router-link to="/" class="text-2xl font-bold flex-none"
           >Cod MWIII Camo Tracker
         </router-link>
 
-        <div class="hidden md:flex grow space-x-8 justify-end lg:justify-center">
+        <div class="hidden md:flex grow space-x-8 justify-end">
           <NavigationBarLink to="/">Home</NavigationBarLink>
           <NavigationBarLink to="/tracker">Tracker</NavigationBarLink>
           <NavigationBarLink to="/settings">Settings</NavigationBarLink>
@@ -36,7 +36,7 @@ const toggleShowMenu = () => {
     <!-- Mobile menu-->
     <div v-if="showMenu">
       <div
-        class="flex flex-col items-center text-2xl space-y-8 py-8"
+        class="flex flex-col items-center text-xl space-y-8 pb-24"
       >
         <NavigationBarLink to="/" @click="toggleShowMenu">Home</NavigationBarLink>
         <NavigationBarLink to="/tracker" @click="toggleShowMenu">Tracker</NavigationBarLink>
