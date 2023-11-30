@@ -35,7 +35,7 @@ const emit = defineEmits<{
           <div class="flex gap-4 items-center">
             <CamoImg
               class=""
-              :class="{ 'flex-none w-10': displayList }"
+              :class="{ 'flex-none w-10': displayList, '': !displayList }"
               :progress="camo"
               @clicked="emit('toggle-camofluage-complete', camo.camofluageName)"
             />
