@@ -143,7 +143,7 @@ export const allWeapons: Weapon[] = [
         type: 'BASE',
         gameMode: 'MULTIPLAYER',
         challenge: 'Get 50 kills while ADS',
-        requirement: 'Weapon level 10',
+        requirement: 'Weapon level 10'
       },
       {
         name: 'Palette Rosemary',
@@ -554,7 +554,7 @@ export const allWeapons: Weapon[] = [
         set: '',
         type: 'COMPLETIONIST',
         gameMode: 'MULTIPLAYER',
-        challenge: 'Get 10 kills being out of the enemy\'s line of sight',
+        challenge: "Get 10 kills being out of the enemy's line of sight",
         requirement: 'Complete 36 forged camo challenges'
       }
     ]
