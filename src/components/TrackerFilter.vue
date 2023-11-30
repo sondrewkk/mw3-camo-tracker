@@ -25,10 +25,7 @@ const { toggleDisplayList, toggleShowFilterMenu, toggleShowFavorites } = tracker
   </FilterButton>
 
   <div class="flex space-x-4 pt-4 md:hidden">
-    <FilterButton
-      @clicked="toggleShowFavorites"
-      class="min-w-1/3 grow"
-    >
+    <FilterButton @clicked="toggleShowFavorites" class="min-w-1/3 grow">
       Favorites
       <HeartIcon class="w-6 h-6" :class="{ 'fill-secondary': showFavorites }" />
     </FilterButton>

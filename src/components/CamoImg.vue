@@ -7,7 +7,7 @@ const props = defineProps<{
   progress: CamofluageProgress
 }>()
 
-const imgUrl = computed( () => getCamoImgUrl(props.progress.camofluageName))
+const imgUrl = computed(() => getCamoImgUrl(props.progress.camofluageName))
 
 const getCamoImgUrl = (name: string) => {
   const formattedName = name.replace(/\s+/g, '_').toLowerCase()
