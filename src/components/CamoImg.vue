@@ -23,7 +23,7 @@ const emit = defineEmits<{
 <template>
   <div class="relative rounded bg-black" @click="emit('clicked')">
     <img
-      class="rounded transition-all duration-250 ease-in-out"
+      class="rounded transition-all duration-250 ease-in-out object-cover w-full h-full"
       :class="{ 'opacity-50': progress.achived }"
       :src="imgUrl"
       :alt="progress.camofluageName"
