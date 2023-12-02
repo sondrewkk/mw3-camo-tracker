@@ -51,25 +51,25 @@ export const useWeaponProgressStore = defineStore(STORE_NAME, () => {
   })
 
   function toggleCamouflageComplete(weaponName: string, camoName: string) {
-    const selectedWeapon = weaponProgress.value.find(weapon => weapon.weaponName === weaponName);
-    if (!selectedWeapon) return;
+    const selectedWeapon = weaponProgress.value.find((weapon) => weapon.weaponName === weaponName)
+    if (!selectedWeapon) return
 
-    const selectedCamo = selectedWeapon.camouflages.find(camo => camo.camouflageName === camoName);
-    if (!selectedCamo) return;
+    const selectedCamo = selectedWeapon.camouflages.find((camo) => camo.camouflageName === camoName)
+    if (!selectedCamo) return
 
-    const { getCamouflageType } = useCamo();
-    const camoType = getCamouflageType(selectedCamo.camouflageName);
+    const { getCamouflageType } = useCamo()
+    const camoType = getCamouflageType(selectedCamo.camouflageName)
 
     if (camoType === 'COMPLETIONIST' && !selectedCamo.achieved) {
-        for (const camo of selectedWeapon.camouflages) {
-            if (camo.camouflageName === camoName) break;
-            camo.achieved = true;
-        }
-        selectedCamo.achieved = true;
+      for (const camo of selectedWeapon.camouflages) {
+        if (camo.camouflageName === camoName) break
+        camo.achieved = true
+      }
+      selectedCamo.achieved = true
     } else {
-        selectedCamo.achieved = !selectedCamo.achieved;
+      selectedCamo.achieved = !selectedCamo.achieved
     }
-}
+  }
 
   function toggleFavorite(weaponName: string) {
     const weapon = weaponProgress.value.find((weapon) => weapon.weaponName === weaponName)
