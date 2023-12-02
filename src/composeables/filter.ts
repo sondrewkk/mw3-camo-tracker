@@ -28,8 +28,8 @@ function filterFavorites(progress: WeaponProgress[]) {
 
 function filterCamo(progress: WeaponProgress[], camoName: string) {
   return progress.filter((weapon) => {
-    const camo = weapon.camofluages.find((camo) => camo.camofluageName === camoName)
-    return !(camo && camo.achived)
+    const camo = weapon.camouflages.find((camo) => camo.camouflageName === camoName)
+    return !(camo && camo.achieved)
   })
 }
 

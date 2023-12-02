@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import type { WeaponProgress } from '@/composeables/weaponProgress'
 import CamoImg from './CamoImg.vue'
-import { useCamo } from '@/composeables/camofluage'
+import { useCamo } from '@/composeables/camouflage'
 import { HeartIcon } from '@heroicons/vue/24/solid'
 import { computed } from 'vue'
 
-const { getCamofluageChallenge } = useCamo()
+const { getCamouflageChallenge } = useCamo()
 
 const props = defineProps<{
   weaponProgress: WeaponProgress
@@ -13,9 +13,9 @@ const props = defineProps<{
 }>()
 
 const bestAchivement = computed(() => {
-  const camos = props.weaponProgress.camofluages
+  const camos = props.weaponProgress.camouflages
   const best = camos.reduce((prev, curr) => {
-    if (curr.achived) {
+    if (curr.achieved) {
       return curr
     }
     return prev
@@ -25,7 +25,7 @@ const bestAchivement = computed(() => {
 
 const achivementColor = computed(() => {
   let color = ''
-  const name = bestAchivement.value.camofluageName.toLowerCase()
+  const name = bestAchivement.value.camouflageName.toLowerCase()
 
   if (name === 'gilded') color = 'bg-gilded'
   else if (name === 'forged') color = 'bg-forged'
@@ -36,7 +36,7 @@ const achivementColor = computed(() => {
 
 const emit = defineEmits<{
   (e: 'toggle-favorite'): void
-  (e: 'toggle-camofluage-complete', camoName: string): void
+  (e: 'toggle-camouflage-complete', camoName: string): void
 }>()
 </script>
 
@@ -59,7 +59,7 @@ const emit = defineEmits<{
         </h2>
       </div>
       <div class="flex mt-4 justify-between" :class="{ 'flex-col gap-y-2': displayList }">
-        <div v-for="camo in weaponProgress.camofluages" :key="camo.camofluageName">
+        <div v-for="camo in weaponProgress.camouflages" :key="camo.camouflageName">
           <div class="flex gap-4 items-center">
             <CamoImg
               class=""
@@ -68,10 +68,10 @@ const emit = defineEmits<{
                 'h-11 md:h-10 lg:h-9 2xl:h-10': !displayList
               }"
               :progress="camo"
-              @clicked="emit('toggle-camofluage-complete', camo.camofluageName)"
+              @clicked="emit('toggle-camouflage-complete', camo.camouflageName)"
             />
             <p v-if="displayList">
-              {{ getCamofluageChallenge(camo.camofluageName) }}
+              {{ getCamouflageChallenge(camo.camouflageName) }}
             </p>
           </div>
         </div>

@@ -7,14 +7,14 @@ import { useWeapons } from '@/composeables/weapon'
 const route = useRoute()
 const showBar = computed(() => route.path === '/tracker')
 const weaponProgressStore = useWeaponProgressStore()
-const { totalCamofluages } = useWeapons()
+const { totalCamouflages } = useWeapons()
 
 const totalAchivedCamos = computed(() => {
-  return weaponProgressStore.getSumOfAllAchivedCamofluages()
+  return weaponProgressStore.getSumOfAllAchivedCamouflages()
 })
 
 const currentProgress = computed(() => {
-  return (totalAchivedCamos.value / totalCamofluages.value) * 100
+  return (totalAchivedCamos.value / totalCamouflages.value) * 100
 })
 </script>
 
@@ -31,7 +31,7 @@ const currentProgress = computed(() => {
     </div>
 
     <div class="absolute inset-0 flex items-center justify-center">
-      <span class="text-sm font-medium">{{ totalAchivedCamos }} of {{ totalCamofluages }}</span>
+      <span class="text-sm font-medium">{{ totalAchivedCamos }} of {{ totalCamouflages }}</span>
     </div>
   </div>
 </template>

@@ -1,13 +1,13 @@
 import { allWeapons } from '@/assets/weapons'
 import { computed, ref } from 'vue'
-import type { Camofluage } from '@/composeables/camofluage'
+import type { Camouflage } from '@/composeables/camouflage'
 
 export type WeaponCategory = 'All' | 'Assault rifle' | 'Submachine gun'
 
 export interface Weapon {
   name: string
   category: WeaponCategory
-  camofluages: Camofluage[]
+  camouflages: Camouflage[]
 }
 
 export function useWeapons() {
@@ -18,13 +18,13 @@ export function useWeapons() {
     return ['All', ...categoriesFromWeapons]
   })
 
-  const totalCamofluages = computed(() => {
-    return weapons.value.reduce((acc, weapon) => acc + weapon.camofluages.length, 0)
+  const totalCamouflages = computed(() => {
+    return weapons.value.reduce((acc, weapon) => acc + weapon.camouflages.length, 0)
   })
 
   return {
     weapons,
     categories,
-    totalCamofluages
+    totalCamouflages
   }
 }

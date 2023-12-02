@@ -8,7 +8,7 @@ import { useWeaponProgressStore } from '@/stores/weaponProgressStore'
 
 const trackerFilterStore = useTrackerFilterStore()
 const { displayList, filteredProgress } = storeToRefs(trackerFilterStore)
-const { toggleCamofluageComplete, toggleFavorite } = useWeaponProgressStore()
+const { toggleCamouflageComplete, toggleFavorite } = useWeaponProgressStore()
 </script>
 
 <template>
@@ -25,8 +25,8 @@ const { toggleCamofluageComplete, toggleFavorite } = useWeaponProgressStore()
             :weapon-progress="weapon"
             :display-list="displayList"
             @toggle-favorite="toggleFavorite(weapon.weaponName)"
-            @toggle-camofluage-complete="
-              (camoName) => toggleCamofluageComplete(weapon.weaponName, camoName)
+            @toggle-camouflage-complete="
+              (camoName) => toggleCamouflageComplete(weapon.weaponName, camoName)
             "
           />
         </div>

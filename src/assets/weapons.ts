@@ -4,7 +4,7 @@ export const allWeapons: Weapon[] = [
   {
     name: 'SVA 545',
     category: 'Assault rifle',
-    camofluages: [
+    camouflages: [
       {
         name: 'Blue Tones',
         set: '',
@@ -66,7 +66,7 @@ export const allWeapons: Weapon[] = [
   {
     name: 'MTZ-556',
     category: 'Assault rifle',
-    camofluages: [
+    camouflages: [
       {
         name: 'Orange Tones',
         set: '',
@@ -128,7 +128,7 @@ export const allWeapons: Weapon[] = [
   {
     name: 'HOLGER 556',
     category: 'Assault rifle',
-    camofluages: [
+    camouflages: [
       {
         name: 'Fractal Dirt',
         set: '',
@@ -190,7 +190,7 @@ export const allWeapons: Weapon[] = [
   {
     name: 'MCW',
     category: 'Assault rifle',
-    camofluages: [
+    camouflages: [
       {
         name: 'Razor Feather',
         set: '',
@@ -252,7 +252,7 @@ export const allWeapons: Weapon[] = [
   {
     name: 'DG-58',
     category: 'Assault rifle',
-    camofluages: [
+    camouflages: [
       {
         name: 'Heat Map',
         set: '',
@@ -314,7 +314,7 @@ export const allWeapons: Weapon[] = [
   {
     name: 'FR 5.56',
     category: 'Assault rifle',
-    camofluages: [
+    camouflages: [
       {
         name: 'Get Stony',
         set: '',
@@ -376,7 +376,7 @@ export const allWeapons: Weapon[] = [
   {
     name: 'STRIKER',
     category: 'Submachine gun',
-    camofluages: [
+    camouflages: [
       {
         name: 'Ameerga',
         set: '',
@@ -438,7 +438,7 @@ export const allWeapons: Weapon[] = [
   {
     name: 'WSP SWARM',
     category: 'Submachine gun',
-    camofluages: [
+    camouflages: [
       {
         name: 'Phantasmal',
         set: '',
@@ -500,7 +500,7 @@ export const allWeapons: Weapon[] = [
   {
     name: 'AMR9',
     category: 'Submachine gun',
-    camofluages: [
+    camouflages: [
       {
         name: 'Dart',
         set: '',
@@ -562,7 +562,7 @@ export const allWeapons: Weapon[] = [
   {
     name: 'WSP-9',
     category: 'Submachine gun',
-    camofluages: [
+    camouflages: [
       {
         name: 'Golden Poison',
         set: '',
@@ -624,7 +624,7 @@ export const allWeapons: Weapon[] = [
   {
     name: 'RIVAL-9',
     category: 'Submachine gun',
-    camofluages: [
+    camouflages: [
       {
         name: 'Rock Stone',
         set: '',
@@ -686,7 +686,7 @@ export const allWeapons: Weapon[] = [
   {
     name: 'STRIKER-9',
     category: 'Submachine gun',
-    camofluages: [
+    camouflages: [
       {
         name: 'Marbled',
         set: '',
