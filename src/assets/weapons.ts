@@ -1116,5 +1116,253 @@ export const allWeapons: Weapon[] = [
         requirement: 'Complete 36 forged camo challenges'
       }
     ]
+  },
+  {
+    name: 'Pulemyot 762',
+    category: 'Light machine gun',
+    camouflages: [
+      {
+        name: 'Cosmic Filaments',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 50 kills',
+        requirement: 'Weapon level 2',
+      },
+      {
+        name: 'Ember Glitch',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 10 penetration kills',
+        requirement: 'Weapon level 12'
+      },
+      {
+        name: 'Sunset Retro',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 10 kills with full attachments',
+        requirement: 'Weapon level 19'
+      },
+      {
+        name: 'B&W Fuzz',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 10 double kills',
+        requirement: 'Weapon level 28'
+      },
+      {
+        name: 'Gilded',
+        set: '',
+        type: 'COMPLETIONIST',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 2 kills without releasing the trigger 10 times',
+        requirement: 'Complete all base camo challenges'
+      },
+      {
+        name: 'Forged',
+        set: '',
+        type: 'COMPLETIONIST',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 25 kills while using a magnification scope',
+        requirement: 'Complete 6 gilded camo challenges with assult rifles'
+      },
+      {
+        name: 'Priceless',
+        set: '',
+        type: 'COMPLETIONIST',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 5 kills with one magazine 10 times',
+        requirement: 'Complete 36 forged camo challenges'
+      }
+    ]
+  },
+  {
+    name: 'DG-58 LSW',
+    category: 'Light machine gun',
+    camouflages: [
+      {
+        name: 'Psychedelic Sky',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 50 kills',
+        requirement: 'Weapon level 2',
+      },
+      {
+        name: 'Topo Reverb',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 10 penetration kills',
+        requirement: 'Weapon level 12'
+      },
+      {
+        name: 'Cold Fall',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 10 kills with full attachments',
+        requirement: 'Weapon level 19'
+      },
+      {
+        name: 'B&W Re-Fuzz',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 10 double kills',
+        requirement: 'Weapon level 29'
+      },
+      {
+        name: 'Gilded',
+        set: '',
+        type: 'COMPLETIONIST',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 2 kills without releasing the trigger 10 times',
+        requirement: 'Complete all base camo challenges'
+      },
+      {
+        name: 'Forged',
+        set: '',
+        type: 'COMPLETIONIST',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 25 kills while ADS and moving',
+        requirement: 'Complete 6 gilded camo challenges with assult rifles'
+      },
+      {
+        name: 'Priceless',
+        set: '',
+        type: 'COMPLETIONIST',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 25 hipfire kills while strafing',
+        requirement: 'Complete 36 forged camo challenges'
+      }
+    ]
+  },
+  {
+    name: 'Holger 26',
+    category: 'Light machine gun',
+    camouflages: [
+      {
+        name: 'Ghastly',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 50 kills',
+        requirement: 'Weapon level 2',
+      },
+      {
+        name: 'Cobalt Sands',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 10 penetration kills',
+        requirement: 'Weapon level 9'
+      },
+      {
+        name: 'Green Field',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 10 kills with full attachments',
+        requirement: 'Weapon level 14'
+      },
+      {
+        name: 'Warbled',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 10 double kills',
+        requirement: 'Weapon level 20'
+      },
+      {
+        name: 'Gilded',
+        set: '',
+        type: 'COMPLETIONIST',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 2 kills without releasing the trigger 10 times',
+        requirement: 'Complete all base camo challenges'
+      },
+      {
+        name: 'Forged',
+        set: '',
+        type: 'COMPLETIONIST',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 25 kills whule ADS and strafing',
+        requirement: 'Complete 6 gilded camo challenges with assult rifles'
+      },
+      {
+        name: 'Priceless',
+        set: '',
+        type: 'COMPLETIONIST',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 25 hipfire kills while moving',
+        requirement: 'Complete 36 forged camo challenges'
+      }
+    ]
+  },
+  {
+    name: 'Bruen Mk9',
+    category: 'Light machine gun',
+    camouflages: [
+      {
+        name: 'Dusted',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 50 kills',
+        requirement: 'Weapon level 2',
+      },
+      {
+        name: 'Shuffle',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 10 penetration kills',
+        requirement: 'Weapon level 9'
+      },
+      {
+        name: 'Drip',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 10 kills with full attachments',
+        requirement: 'Weapon level 14'
+      },
+      {
+        name: 'Gaggle',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 10 double kills',
+        requirement: 'Weapon level 20'
+      },
+      {
+        name: 'Gilded',
+        set: '',
+        type: 'COMPLETIONIST',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 2 kills without releasing the trigger 10 times',
+        requirement: 'Complete all base camo challenges'
+      },
+      {
+        name: 'Forged',
+        set: '',
+        type: 'COMPLETIONIST',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 20 operator suppressed headshot kills',
+        requirement: 'Complete 6 gilded camo challenges with assult rifles'
+      },
+      {
+        name: 'Priceless',
+        set: '',
+        type: 'COMPLETIONIST',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 3 operator kills with 1 magazine 10 times',
+        requirement: 'Complete 36 forged camo challenges'
+      }
+    ]
   }
 ]
