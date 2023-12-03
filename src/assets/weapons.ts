@@ -1364,5 +1364,253 @@ export const allWeapons: Weapon[] = [
         requirement: 'Complete 36 forged camo challenges'
       }
     ]
+  },
+  {
+    name: 'KVD Enforcer',
+    category: 'Marksman rifle',
+    camouflages: [
+      {
+        name: 'Viral',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 50 kills',
+        requirement: 'Weapon level 2',
+      },
+      {
+        name: 'Palette Garden',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 50 headshots kills',
+        requirement: 'Weapon level 13'
+      },
+      {
+        name: 'Clouded Mind',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 10 kills with no attachments',
+        requirement: 'Weapon level 20'
+      },
+      {
+        name: 'Skull-o-vision',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 2 kills without dying 15 times',
+        requirement: 'Weapon level 30'
+      },
+      {
+        name: 'Gilded',
+        set: '',
+        type: 'COMPLETIONIST',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 10 kills using a laser attachment',
+        requirement: 'Complete all base camo challenges'
+      },
+      {
+        name: 'Forged',
+        set: '',
+        type: 'COMPLETIONIST',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 25 one shot kills',
+        requirement: 'Complete 6 gilded camo challenges with assult rifles'
+      },
+      {
+        name: 'Priceless',
+        set: '',
+        type: 'COMPLETIONIST',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 25 extreme magnification kills (8X+)',
+        requirement: 'Complete 36 forged camo challenges'
+      }
+    ]
+  },
+  {
+    name: 'MCW 6.8',
+    category: 'Marksman rifle',
+    camouflages: [
+      {
+        name: 'Sharp Brush',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 50 kills',
+        requirement: 'Weapon level 2',
+      },
+      {
+        name: 'Topo Lithic',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 50 headshots kills',
+        requirement: 'Weapon level 10'
+      },
+      {
+        name: 'Dry Heat',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 10 kills with no attachments',
+        requirement: 'Weapon level 16'
+      },
+      {
+        name: 'Insectoid',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 2 kills without dying 15 times',
+        requirement: 'Weapon level 24'
+      },
+      {
+        name: 'Gilded',
+        set: '',
+        type: 'COMPLETIONIST',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 10 kills using a laser attachment',
+        requirement: 'Complete all base camo challenges'
+      },
+      {
+        name: 'Forged',
+        set: '',
+        type: 'COMPLETIONIST',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 3 kills with 1 magazine 15 times',
+        requirement: 'Complete 6 gilded camo challenges with assult rifles'
+      },
+      {
+        name: 'Priceless',
+        set: '',
+        type: 'COMPLETIONIST',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 15 suppresed clean kills',
+        requirement: 'Complete 36 forged camo challenges'
+      }
+    ]
+  },
+  {
+    name: 'DM56',
+    category: 'Marksman rifle',
+    camouflages: [
+      {
+        name: 'Microbiology',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 50 kills',
+        requirement: 'Weapon level 2',
+      },
+      {
+        name: 'Woods Brush',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 50 headshots kills',
+        requirement: 'Weapon level 10'
+      },
+      {
+        name: 'Red Sands',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 10 kills with no attachments',
+        requirement: 'Weapon level 15'
+      },
+      {
+        name: 'Bone Shaker',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 2 kills without dying 15 times',
+        requirement: 'Weapon level 23'
+      },
+      {
+        name: 'Gilded',
+        set: '',
+        type: 'COMPLETIONIST',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 10 kills using a laser attachment',
+        requirement: 'Complete all base camo challenges'
+      },
+      {
+        name: 'Forged',
+        set: '',
+        type: 'COMPLETIONIST',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 25 kills while in tactical stance',
+        requirement: 'Complete 6 gilded camo challenges with assult rifles'
+      },
+      {
+        name: 'Priceless',
+        set: '',
+        type: 'COMPLETIONIST',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 15 headshtos with a iron sights',
+        requirement: 'Complete 36 forged camo challenges'
+      }
+    ]
+  },
+  {
+    name: 'MTZ Interceptor',
+    category: 'Marksman rifle',
+    camouflages: [
+      {
+        name: 'Psychedelic Loops',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 50 kills',
+        requirement: 'Weapon level 2',
+      },
+      {
+        name: 'Thick Brush',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 50 headshots kills',
+        requirement: 'Weapon level 8'
+      },
+      {
+        name: 'Oil Slick Glitch',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 10 kills with no attachments',
+        requirement: 'Weapon level 12'
+      },
+      {
+        name: 'Skullish',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 2 kills without dying 15 times',
+        requirement: 'Weapon level 21'
+      },
+      {
+        name: 'Gilded',
+        set: '',
+        type: 'COMPLETIONIST',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 10 kills using a laser attachment',
+        requirement: 'Complete all base camo challenges'
+      },
+      {
+        name: 'Forged',
+        set: '',
+        type: 'COMPLETIONIST',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 4 kills without dying 10 times',
+        requirement: 'Complete 6 gilded camo challenges with assult rifles'
+      },
+      {
+        name: 'Priceless',
+        set: '',
+        type: 'COMPLETIONIST',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 5 kills without dying 5 times',
+        requirement: 'Complete 36 forged camo challenges'
+      }
+    ]
   }
 ]
