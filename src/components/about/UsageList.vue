@@ -52,7 +52,7 @@ const cardLayout = 'basis-80 flex-initial'
 
     <UsageCard
         title="Gamers"
-        description="By gamers for gamers. Qhat you need, nothing more."
+        description="By gamers for gamers. What you need, nothing more."
         :class="cardLayout"
     >
         <template v-slot:icon>
