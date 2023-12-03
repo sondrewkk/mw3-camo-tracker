@@ -2,7 +2,7 @@ import { allWeapons } from '@/assets/weapons'
 import { computed, ref } from 'vue'
 import type { Camouflage } from '@/composeables/camouflage'
 
-export type WeaponCategory = 'All' | 'Assault rifle' | 'Battle rifle' | 'Submachine gun' | 'Shotgun' | 'Light machine gun' | 'Marksman rifle'
+export type WeaponCategory = 'All' | 'Assault rifle' | 'Battle rifle' | 'Submachine gun' | 'Shotgun' | 'Light machine gun' | 'Marksman rifle' | 'Sniper rifle'
 
 export interface Weapon {
   name: string

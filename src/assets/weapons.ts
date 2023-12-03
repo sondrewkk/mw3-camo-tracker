@@ -1612,5 +1612,191 @@ export const allWeapons: Weapon[] = [
         requirement: 'Complete 36 forged camo challenges'
       }
     ]
+  },
+  {
+    name: 'KATT-AMR',
+    category: 'Sniper rifle',
+    camouflages: [
+      {
+        name: 'Death 3D',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 50 kills',
+        requirement: 'Weapon level 2',
+      },
+      {
+        name: 'Topo Boulder',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 50 kills shortly after ADS',
+        requirement: 'Weapon level 12'
+      },
+      {
+        name: 'Palette Neapolitan',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 3 kills with 1 magazine 10 times',
+        requirement: 'Weapon level 18'
+      },
+      {
+        name: 'Art Glass',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 15 one shot kills',
+        requirement: 'Weapon level 29'
+      },
+      {
+        name: 'Gilded',
+        set: '',
+        type: 'COMPLETIONIST',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 10 kills wile focused down sights X times',
+        requirement: 'Complete all base camo challenges'
+      },
+      {
+        name: 'Forged',
+        set: '',
+        type: 'COMPLETIONIST',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 15 penetration kills',
+        requirement: 'Complete 6 gilded camo challenges with assult rifles'
+      },
+      {
+        name: 'Priceless',
+        set: '',
+        type: 'COMPLETIONIST',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 3 suppresed headshots',
+        requirement: 'Complete 36 forged camo challenges'
+      }
+    ]
+  },
+  {
+    name: 'Longbow',
+    category: 'Sniper rifle',
+    camouflages: [
+      {
+        name: 'Crimson Skulls',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 50 kills',
+        requirement: 'Weapon level 2',
+      },
+      {
+        name: 'Topo Arid',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 50 kills shortly after ADS',
+        requirement: 'Weapon level 13'
+      },
+      {
+        name: 'Palette Sunrise',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 3 kills with 1 magazine 10 times',
+        requirement: 'Weapon level 21'
+      },
+      {
+        name: 'Rippled',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 15 one shot kills',
+        requirement: 'Weapon level 31'
+      },
+      {
+        name: 'Gilded',
+        set: '',
+        type: 'COMPLETIONIST',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 10 kills wile focused down sights X times',
+        requirement: 'Complete all base camo challenges'
+      },
+      {
+        name: 'Forged',
+        set: '',
+        type: 'COMPLETIONIST',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 25 kills while ADS and fully loaded',
+        requirement: 'Complete 6 gilded camo challenges with assult rifles'
+      },
+      {
+        name: 'Priceless',
+        set: '',
+        type: 'COMPLETIONIST',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 5 kills without dying 3 times',
+        requirement: 'Complete 36 forged camo challenges'
+      }
+    ]
+  },
+  {
+    name: 'KV Inhibitor',
+    category: 'Sniper rifle',
+    camouflages: [
+      {
+        name: 'Deathparency',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 50 kills',
+        requirement: 'Weapon level 2',
+      },
+      {
+        name: 'Tactical colors',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 50 kills shortly after ADS',
+        requirement: 'Weapon level 14'
+      },
+      {
+        name: 'Palette Dusk',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 3 kills with 1 magazine 10 times',
+        requirement: 'Weapon level 22'
+      },
+      {
+        name: 'Puzzling Tiles',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 15 one shot kills',
+        requirement: 'Weapon level 33'
+      },
+      {
+        name: 'Gilded',
+        set: '',
+        type: 'COMPLETIONIST',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 10 kills wile focused down sights X times',
+        requirement: 'Complete all base camo challenges'
+      },
+      {
+        name: 'Forged',
+        set: '',
+        type: 'COMPLETIONIST',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 25 headshot kills',
+        requirement: 'Complete 6 gilded camo challenges with assult rifles'
+      },
+      {
+        name: 'Priceless',
+        set: '',
+        type: 'COMPLETIONIST',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 5 headshots while moving',
+        requirement: 'Complete 36 forged camo challenges'
+      }
+    ]
   }
 ]
