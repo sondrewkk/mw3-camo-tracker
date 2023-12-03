@@ -930,5 +930,191 @@ export const allWeapons: Weapon[] = [
         requirement: 'Complete 36 forged camo challenges'
       }
     ]
+  },
+  {
+    name: 'Lockwood 680',
+    category: 'Shotgun',
+    camouflages: [
+      {
+        name: 'Blue Sands',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 50 kills',
+        requirement: 'Weapon level 2'
+      },
+      {
+        name: 'Palette Navy',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 50 hipfire kills',
+        requirement: 'Weapon level 11'
+      },
+      {
+        name: 'Descent',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 10 kills while ADS',
+        requirement: 'Weapon level 18'
+      },
+      {
+        name: 'Overwhelmed',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 15 double kills',
+        requirement: 'Weapon level 27'
+      },
+      {
+        name: 'Gilded',
+        set: '',
+        type: 'COMPLETIONIST',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 2 kills shortly after sprinting 1 life',
+        requirement: 'Complete all base camo challenges'
+      },
+      {
+        name: 'Forged',
+        set: '',
+        type: 'COMPLETIONIST',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 25 a shot kills while ADS',
+        requirement: 'Complete 6 gilded camo challenges with assult rifles'
+      },
+      {
+        name: 'Priceless',
+        set: '',
+        type: 'COMPLETIONIST',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 5 hipfire kills while moving',
+        requirement: 'Complete 36 forged camo challenges'
+      }
+    ]
+  },
+  {
+    name: 'Haymaker',
+    category: 'Shotgun',
+    camouflages: [
+      {
+        name: 'Pink Sands',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 50 kills',
+        requirement: 'Weapon level 2',
+      },
+      {
+        name: 'Guts',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 50 hipfire kills',
+        requirement: 'Weapon level 9'
+      },
+      {
+        name: 'Palette Tropics',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 10 kills while ADS',
+        requirement: 'Weapon level 15'
+      },
+      {
+        name: 'Smooth Satin',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 15 double kills',
+        requirement: 'Weapon level 22'
+      },
+      {
+        name: 'Gilded',
+        set: '',
+        type: 'COMPLETIONIST',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 2 kills shortly after sprinting 1 life',
+        requirement: 'Complete all base camo challenges'
+      },
+      {
+        name: 'Forged',
+        set: '',
+        type: 'COMPLETIONIST',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 3 hipfire kills with 1 magazine 15 times',
+        requirement: 'Complete 6 gilded camo challenges with assult rifles'
+      },
+      {
+        name: 'Priceless',
+        set: '',
+        type: 'COMPLETIONIST',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 10 double kills while in tac stance',
+        requirement: 'Complete 36 forged camo challenges'
+      }
+    ]
+  },
+  {
+    name: 'Riveter',
+    category: 'Shotgun',
+    camouflages: [
+      {
+        name: 'Purple Sands',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 50 kills',
+        requirement: 'Weapon level 2',
+      },
+      {
+        name: '\'80s Spheres',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 50 hipfire kills',
+        requirement: 'Weapon level 10'
+      },
+      {
+        name: 'Palette Grasses',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 10 kills while ADS',
+        requirement: 'Weapon level 16'
+      },
+      {
+        name: 'Upward Reverb',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 15 double kills',
+        requirement: 'Weapon level 24'
+      },
+      {
+        name: 'Gilded',
+        set: '',
+        type: 'COMPLETIONIST',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 2 kills shortly after sprinting 1 life',
+        requirement: 'Complete all base camo challenges'
+      },
+      {
+        name: 'Forged',
+        set: '',
+        type: 'COMPLETIONIST',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 25 multikills',
+        requirement: 'Complete 6 gilded camo challenges with assult rifles'
+      },
+      {
+        name: 'Priceless',
+        set: '',
+        type: 'COMPLETIONIST',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 5 kills without dying 5 times',
+        requirement: 'Complete 36 forged camo challenges'
+      }
+    ]
   }
 ]
