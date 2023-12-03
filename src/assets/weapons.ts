@@ -312,6 +312,192 @@ export const allWeapons: Weapon[] = [
     ]
   },
   {
+    name: 'BAS-B',
+    category: 'Battle rifle',
+    camouflages: [
+      {
+        name: 'Sunset Blur',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 50 kills',
+        requirement: 'Weapon level 2'
+      },
+      {
+        name: 'Phantom Glitch',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 50 while fully auto',
+        requirement: 'Weapon level 12'
+      },
+      {
+        name: 'Orange Sands',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 10 kills while using a magnification scope',
+        requirement: 'Weapon level 19'
+      },
+      {
+        name: 'White Satin',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 15 headshots kills',
+        requirement: 'Weapon level 29'
+      },
+      {
+        name: 'Gilded',
+        set: '',
+        type: 'COMPLETIONIST',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 3 operator kills with 1 magazine 10 times',
+        requirement: 'Complete all base camo challenges'
+      },
+      {
+        name: 'Forged',
+        set: '',
+        type: 'COMPLETIONIST',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 10 multikills',
+        requirement: 'Complete 6 gilded camo challenges with assult rifles'
+      },
+      {
+        name: 'Priceless',
+        set: '',
+        type: 'COMPLETIONIST',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 25 suppresed clean kills',
+        requirement: 'Complete 36 forged camo challenges'
+      }
+    ]
+  },
+  {
+    name: 'Sidewinder',
+    category: 'Battle rifle',
+    camouflages: [
+      {
+        name: 'Solar Flare',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 50 kills',
+        requirement: 'Weapon level 2'
+      },
+      {
+        name: 'Sandzone',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 50 while fully auto',
+        requirement: 'Weapon level 12',
+      },
+      {
+        name: 'Mind Peak',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 10 kills while using a magnification scope',
+        requirement: 'Weapon level 19'
+      },
+      {
+        name: 'Purple Satin',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 15 headshots kills',
+        requirement: 'Weapon level 28'
+      },
+      {
+        name: 'Gilded',
+        set: '',
+        type: 'COMPLETIONIST',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 3 operator kills with 1 magazine 10 times',
+        requirement: 'Complete all base camo challenges'
+      },
+      {
+        name: 'Forged',
+        set: '',
+        type: 'COMPLETIONIST',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 25 operator kills or operator one shot kills',
+        requirement: 'Complete 6 gilded camo challenges with assult rifles'
+      },
+      {
+        name: 'Priceless',
+        set: '',
+        type: 'COMPLETIONIST',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 25 long shot kills',
+        requirement: 'Complete 36 forged camo challenges'
+      }
+    ]
+  },
+  {
+    name: 'MTZ-762',
+    category: 'Battle rifle',
+    camouflages: [
+      {
+        name: 'Aquatic Blur',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 50 kills',
+        requirement: 'Weapon level 2',
+      },
+      {
+        name: 'Topo Caustic',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 50 while fully auto',
+        requirement: 'Weapon level 10'
+      },
+      {
+        name: 'Heatwave',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 10 kills while using a magnification scope',
+        requirement: 'Weapon level 15'
+      },
+      {
+        name: 'Blue Satin',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 15 headshots kills',
+        requirement: 'Weapon level 23'
+      },
+      {
+        name: 'Gilded',
+        set: '',
+        type: 'COMPLETIONIST',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 3 operator kills with 1 magazine 10 times',
+        requirement: 'Complete all base camo challenges'
+      },
+      {
+        name: 'Forged',
+        set: '',
+        type: 'COMPLETIONIST',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 25 kills while ADS and fully loaded',
+        requirement: 'Complete 6 gilded camo challenges with assult rifles'
+      },
+      {
+        name: 'Priceless',
+        set: '',
+        type: 'COMPLETIONIST',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 15 semi-auto headshots with a magnification scope',
+        requirement: 'Complete 36 forged camo challenges'
+      }
+    ]
+  },
+  {
     name: 'FR 5.56',
     category: 'Assault rifle',
     camouflages: [
