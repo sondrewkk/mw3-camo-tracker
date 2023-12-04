@@ -1654,7 +1654,7 @@ export const allWeapons: Weapon[] = [
         set: '',
         type: 'COMPLETIONIST',
         gameMode: 'MULTIPLAYER',
-        challenge: 'Get 10 kills wile focused down sights X times',
+        challenge: 'Get 10 kills while focused down sights X times',
         requirement: 'Complete all base camo challenges'
       },
       {
@@ -1716,7 +1716,7 @@ export const allWeapons: Weapon[] = [
         set: '',
         type: 'COMPLETIONIST',
         gameMode: 'MULTIPLAYER',
-        challenge: 'Get 10 kills wile focused down sights X times',
+        challenge: 'Get 10 kills while focused down sights X times',
         requirement: 'Complete all base camo challenges'
       },
       {
@@ -1778,7 +1778,7 @@ export const allWeapons: Weapon[] = [
         set: '',
         type: 'COMPLETIONIST',
         gameMode: 'MULTIPLAYER',
-        challenge: 'Get 10 kills wile focused down sights X times',
+        challenge: 'Get 10 kills while focused down sights X times',
         requirement: 'Complete all base camo challenges'
       },
       {
@@ -1797,6 +1797,254 @@ export const allWeapons: Weapon[] = [
         challenge: 'Get 5 headshots while moving',
         requirement: 'Complete 36 forged camo challenges'
       }
+    ]
+  },
+  {
+    name: 'COR-45',
+    category: 'Pistol',
+    camouflages: [
+      {
+        name: 'Deconstructed',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 50 kills',
+        requirement: 'Weapon level 2',
+      },
+      {
+        name: 'Alert Glitch',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'get 50 kills while ADS',
+        requirement: 'Weapon level 9'
+      },
+      {
+        name: 'Acid Drip',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 10 kills while moving',
+        requirement: 'Weapon level 14'
+      },
+      {
+        name: 'Red Admiral',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 15 kills with the akimbo attachment',
+        requirement: 'Weapon level 21'
+      },
+      {
+        name: 'Gilded',
+        set: '',
+        type: 'COMPLETIONIST',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 10 kills without the enemy damaging you',
+        requirement: 'Complete all base camo challenges'
+      },
+      {
+        name: 'Forged',
+        set: '',
+        type: 'COMPLETIONIST',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 15 kills on injured enemies',
+        requirement: 'Complete 6 gilded camo challenges with assult rifles'
+      },
+      {
+        name: 'Priceless',
+        set: '',
+        type: 'COMPLETIONIST',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 10 headshot kills',
+        requirement: 'Complete 36 forged camo challenges'
+      }
+    ]
+  },
+  {
+    name: 'Renetti',
+    category: 'Pistol',
+    camouflages: [
+      {
+        name: 'Pyro Filaments',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 50 kills',
+        requirement: 'Weapon level 2',
+      },
+      {
+        name: 'Red Cells',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 50 kills while ADS',
+        requirement: 'Weapon level 9'
+      },
+      {
+        name: 'Psychotropic',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 10 kills while moving',
+        requirement: 'Weapon level 14'
+      },
+      {
+        name: 'Pabels',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 15 kills with the akimbo attachment',
+        requirement: 'Weapon level 21'
+      },
+      {
+        name: 'Gilded',
+        set: '',
+        type: 'COMPLETIONIST',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 10 kills without the enemy damaging you',
+        requirement: 'Complete all base camo challenges'
+      },
+      {
+        name: 'Forged',
+        set: '',
+        type: 'COMPLETIONIST',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 25 longshot kills',
+        requirement: 'Complete 6 gilded camo challenges with assult rifles'
+      },
+      {
+        name: 'Priceless',
+        set: '',
+        type: 'COMPLETIONIST',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 25 headshot kills',
+        requirement: 'Complete 36 forged camo challenges'
+      }
+    ]
+  },
+  {
+    name: 'TYR',
+    category: 'Pistol',
+    camouflages: [
+      {
+        name: 'Satin Swirl',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 50 kills',
+        requirement: 'Weapon level 2',
+      },
+      {
+        name: 'Topo Sandrock',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 50 kills while ADS',
+        requirement: 'Weapon level 11'
+      },
+      {
+        name: 'Cherry Blossom',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 10 kills while moving',
+        requirement: 'Weapon level 17'
+      },
+      {
+        name: 'Corrugated',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 15 kills with the akimbo attachment',
+        requirement: 'Weapon level 26'
+      },
+      {
+        name: 'Gilded',
+        set: '',
+        type: 'COMPLETIONIST',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 10 kills without the enemy damaging you',
+        requirement: 'Complete all base camo challenges'
+      },
+      {
+        name: 'Forged',
+        set: '',
+        type: 'COMPLETIONIST',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 25 one shot kills',
+        requirement: 'Complete 6 gilded camo challenges with assult rifles'
+      },
+      {
+        name: 'Priceless',
+        set: '',
+        type: 'COMPLETIONIST',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 25 kills while using a magnification scope',
+        requirement: 'Complete 36 forged camo challenges'
+      }
+    ]
+  },
+  {
+    name: 'WSP Stinger',
+    category: 'Pistol',
+    camouflages: [
+      {
+        name: 'Green Sands',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 50 kills',
+        requirement: 'Weapon level 2',
+      },
+      {
+        name: 'Arctic Filaments',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 50 kills while ADS',
+        requirement: 'Weapon level 6'
+      },
+      {
+        name: 'Geofunk',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 10 kills while moving',
+        requirement: 'Weapon level 10'
+      },
+      {
+        name: 'Mind Test',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 15 kills with the akimbo attachment',
+        requirement: 'Weapon level 14'
+      },
+      {
+        name: 'Gilded',
+        set: '',
+        type: 'COMPLETIONIST',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 10 kills without the enemy damaging you',
+        requirement: 'Complete all base camo challenges'
+      },
+      {
+        name: 'Forged',
+        set: '',
+        type: 'COMPLETIONIST',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 25 hipfire kills while strafing',
+        requirement: 'Complete 6 gilded camo challenges with assult rifles'
+      },
+      {
+        name: 'Priceless',
+        set: '',
+        type: 'COMPLETIONIST',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Kill 25 enimies affected by your tactical using the akimbo attachment',
+        requirement: 'Complete 36 forged camo challenges'
+      },
     ]
   }
 ]
