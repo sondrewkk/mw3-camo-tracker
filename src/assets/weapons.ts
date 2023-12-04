@@ -2084,5 +2084,81 @@ export const allWeapons: Weapon[] = [
         requirement: 'Complete 36 forged camo challenges'
       }
     ]
+  },
+  {
+    name: 'Gutter Knife',
+    category: 'Melee',
+    camouflages: [
+      {
+        name: 'Sea Green Sands',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 50 kills',
+        requirement: 'Weapon level 4',
+      },
+      {
+        name: 'Gilded',
+        set: '',
+        type: 'COMPLETIONIST',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 10 kills on operators affected by your tactical',
+        requirement: 'Complete all base camo challenges'
+      },
+      {
+        name: 'Forged',
+        set: '',
+        type: 'COMPLETIONIST',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 5 kills without dying 5 times',
+        requirement: 'Complete 6 gilded camo challenges with assult rifles'
+      },
+      {
+        name: 'Priceless',
+        set: '',
+        type: 'COMPLETIONIST',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get Get 15 Revenge kills',
+        requirement: 'Complete 36 forged camo challenges'
+      }
+    ]
+  },
+  {
+    name: 'Karambit',
+    category: 'Melee',
+    camouflages: [
+      {
+        name: 'Dark Vision',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 50 kills',
+        requirement: 'Weapon level 4',
+      },
+      {
+        name: 'Gilded',
+        set: '',
+        type: 'COMPLETIONIST',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 10 kills on operators affected by your tactical',
+        requirement: 'Complete all base camo challenges'
+      },
+      {
+        name: 'Forged',
+        set: '',
+        type: 'COMPLETIONIST',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 20 kills without the enemy damaging you',
+        requirement: 'Complete 6 gilded camo challenges with assult rifles'
+      },
+      {
+        name: 'Priceless',
+        set: '',
+        type: 'COMPLETIONIST',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 10 kills from behind',
+        requirement: 'Complete 36 forged camo challenges'
+      }
+    ]
   }
 ]
