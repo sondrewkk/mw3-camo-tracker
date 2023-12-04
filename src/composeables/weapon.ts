@@ -12,6 +12,7 @@ export type WeaponCategory =
   | 'Marksman rifle'
   | 'Sniper rifle'
   | 'Pistol'
+  | 'Launcher'
 
 export interface Weapon {
   name: string

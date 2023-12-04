@@ -2046,5 +2046,43 @@ export const allWeapons: Weapon[] = [
         requirement: 'Complete 36 forged camo challenges'
       },
     ]
+  },
+  {
+    name: 'RGL-80',
+    category: 'Launcher',
+    camouflages: [
+      {
+        name: 'Strain',
+        set: '',
+        type: 'BASE',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 25 kills',
+        requirement: 'Weapon level 4',
+      },
+      {
+        name: 'Gilded',
+        set: '',
+        type: 'COMPLETIONIST',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 10 kills by hitting the enemy with a direct impact',
+        requirement: 'Complete all base camo challenges'
+      },
+      {
+        name: 'Forged',
+        set: '',
+        type: 'COMPLETIONIST',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Destroy 25 enemy equipment',
+        requirement: 'Complete 6 gilded camo challenges with assult rifles'
+      },
+      {
+        name: 'Priceless',
+        set: '',
+        type: 'COMPLETIONIST',
+        gameMode: 'MULTIPLAYER',
+        challenge: 'Get 25 double kills',
+        requirement: 'Complete 36 forged camo challenges'
+      }
+    ]
   }
 ]
