@@ -10,9 +10,9 @@ const router = createRouter({
       component: HomeView
     },
     {
-      path: '/tracker',
-      name: 'tracker',
-      component: () => import('@/views/TrackerView.vue')
+      path: '/multiplayer',
+      name: 'multiplayer',
+      component: () => import('@/views/MultiplayerTrackerView.vue')
     },
     {
       path: '/settings',

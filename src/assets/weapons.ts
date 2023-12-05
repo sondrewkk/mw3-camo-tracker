@@ -391,7 +391,7 @@ export const allWeapons: Weapon[] = [
         type: 'BASE',
         gameMode: 'MULTIPLAYER',
         challenge: 'Get 50 while fully auto',
-        requirement: 'Weapon level 12',
+        requirement: 'Weapon level 12'
       },
       {
         name: 'Mind Peak',
@@ -445,7 +445,7 @@ export const allWeapons: Weapon[] = [
         type: 'BASE',
         gameMode: 'MULTIPLAYER',
         challenge: 'Get 50 kills',
-        requirement: 'Weapon level 2',
+        requirement: 'Weapon level 2'
       },
       {
         name: 'Topo Caustic',
@@ -1003,7 +1003,7 @@ export const allWeapons: Weapon[] = [
         type: 'BASE',
         gameMode: 'MULTIPLAYER',
         challenge: 'Get 50 kills',
-        requirement: 'Weapon level 2',
+        requirement: 'Weapon level 2'
       },
       {
         name: 'Guts',
@@ -1065,10 +1065,10 @@ export const allWeapons: Weapon[] = [
         type: 'BASE',
         gameMode: 'MULTIPLAYER',
         challenge: 'Get 50 kills',
-        requirement: 'Weapon level 2',
+        requirement: 'Weapon level 2'
       },
       {
-        name: '\'80s Spheres',
+        name: "'80s Spheres",
         set: '',
         type: 'BASE',
         gameMode: 'MULTIPLAYER',
@@ -1127,7 +1127,7 @@ export const allWeapons: Weapon[] = [
         type: 'BASE',
         gameMode: 'MULTIPLAYER',
         challenge: 'Get 50 kills',
-        requirement: 'Weapon level 2',
+        requirement: 'Weapon level 2'
       },
       {
         name: 'Ember Glitch',
@@ -1189,7 +1189,7 @@ export const allWeapons: Weapon[] = [
         type: 'BASE',
         gameMode: 'MULTIPLAYER',
         challenge: 'Get 50 kills',
-        requirement: 'Weapon level 2',
+        requirement: 'Weapon level 2'
       },
       {
         name: 'Topo Reverb',
@@ -1251,7 +1251,7 @@ export const allWeapons: Weapon[] = [
         type: 'BASE',
         gameMode: 'MULTIPLAYER',
         challenge: 'Get 50 kills',
-        requirement: 'Weapon level 2',
+        requirement: 'Weapon level 2'
       },
       {
         name: 'Cobalt Sands',
@@ -1313,7 +1313,7 @@ export const allWeapons: Weapon[] = [
         type: 'BASE',
         gameMode: 'MULTIPLAYER',
         challenge: 'Get 50 kills',
-        requirement: 'Weapon level 2',
+        requirement: 'Weapon level 2'
       },
       {
         name: 'Shuffle',
@@ -1375,7 +1375,7 @@ export const allWeapons: Weapon[] = [
         type: 'BASE',
         gameMode: 'MULTIPLAYER',
         challenge: 'Get 50 kills',
-        requirement: 'Weapon level 2',
+        requirement: 'Weapon level 2'
       },
       {
         name: 'Palette Garden',
@@ -1437,7 +1437,7 @@ export const allWeapons: Weapon[] = [
         type: 'BASE',
         gameMode: 'MULTIPLAYER',
         challenge: 'Get 50 kills',
-        requirement: 'Weapon level 2',
+        requirement: 'Weapon level 2'
       },
       {
         name: 'Topo Lithic',
@@ -1499,7 +1499,7 @@ export const allWeapons: Weapon[] = [
         type: 'BASE',
         gameMode: 'MULTIPLAYER',
         challenge: 'Get 50 kills',
-        requirement: 'Weapon level 2',
+        requirement: 'Weapon level 2'
       },
       {
         name: 'Woods Brush',
@@ -1561,7 +1561,7 @@ export const allWeapons: Weapon[] = [
         type: 'BASE',
         gameMode: 'MULTIPLAYER',
         challenge: 'Get 50 kills',
-        requirement: 'Weapon level 2',
+        requirement: 'Weapon level 2'
       },
       {
         name: 'Thick Brush',
@@ -1623,7 +1623,7 @@ export const allWeapons: Weapon[] = [
         type: 'BASE',
         gameMode: 'MULTIPLAYER',
         challenge: 'Get 50 kills',
-        requirement: 'Weapon level 2',
+        requirement: 'Weapon level 2'
       },
       {
         name: 'Topo Boulder',
@@ -1685,7 +1685,7 @@ export const allWeapons: Weapon[] = [
         type: 'BASE',
         gameMode: 'MULTIPLAYER',
         challenge: 'Get 50 kills',
-        requirement: 'Weapon level 2',
+        requirement: 'Weapon level 2'
       },
       {
         name: 'Topo Arid',
@@ -1747,7 +1747,7 @@ export const allWeapons: Weapon[] = [
         type: 'BASE',
         gameMode: 'MULTIPLAYER',
         challenge: 'Get 50 kills',
-        requirement: 'Weapon level 2',
+        requirement: 'Weapon level 2'
       },
       {
         name: 'Tactical colors',
@@ -1809,7 +1809,7 @@ export const allWeapons: Weapon[] = [
         type: 'BASE',
         gameMode: 'MULTIPLAYER',
         challenge: 'Get 50 kills',
-        requirement: 'Weapon level 2',
+        requirement: 'Weapon level 2'
       },
       {
         name: 'Alert Glitch',
@@ -1871,7 +1871,7 @@ export const allWeapons: Weapon[] = [
         type: 'BASE',
         gameMode: 'MULTIPLAYER',
         challenge: 'Get 50 kills',
-        requirement: 'Weapon level 2',
+        requirement: 'Weapon level 2'
       },
       {
         name: 'Red Cells',
@@ -1933,7 +1933,7 @@ export const allWeapons: Weapon[] = [
         type: 'BASE',
         gameMode: 'MULTIPLAYER',
         challenge: 'Get 50 kills',
-        requirement: 'Weapon level 2',
+        requirement: 'Weapon level 2'
       },
       {
         name: 'Topo Sandrock',
@@ -1995,7 +1995,7 @@ export const allWeapons: Weapon[] = [
         type: 'BASE',
         gameMode: 'MULTIPLAYER',
         challenge: 'Get 50 kills',
-        requirement: 'Weapon level 2',
+        requirement: 'Weapon level 2'
       },
       {
         name: 'Arctic Filaments',
@@ -2044,7 +2044,7 @@ export const allWeapons: Weapon[] = [
         gameMode: 'MULTIPLAYER',
         challenge: 'Kill 25 enimies affected by your tactical using the akimbo attachment',
         requirement: 'Complete 36 forged camo challenges'
-      },
+      }
     ]
   },
   {
@@ -2057,7 +2057,7 @@ export const allWeapons: Weapon[] = [
         type: 'BASE',
         gameMode: 'MULTIPLAYER',
         challenge: 'Get 25 kills',
-        requirement: 'Weapon level 4',
+        requirement: 'Weapon level 4'
       },
       {
         name: 'Gilded',
@@ -2095,7 +2095,7 @@ export const allWeapons: Weapon[] = [
         type: 'BASE',
         gameMode: 'MULTIPLAYER',
         challenge: 'Get 50 kills',
-        requirement: 'Weapon level 4',
+        requirement: 'Weapon level 4'
       },
       {
         name: 'Gilded',
@@ -2133,7 +2133,7 @@ export const allWeapons: Weapon[] = [
         type: 'BASE',
         gameMode: 'MULTIPLAYER',
         challenge: 'Get 50 kills',
-        requirement: 'Weapon level 4',
+        requirement: 'Weapon level 4'
       },
       {
         name: 'Gilded',

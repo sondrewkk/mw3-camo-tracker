@@ -8,7 +8,7 @@
           locally on your device.
         </p>
         <button class="btn btn-primary btn-lg">
-          <router-link to="/tracker">Get Started</router-link>
+          <router-link to="/multiplayer">Get Started</router-link>
         </button>
       </div>
     </div>

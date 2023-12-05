@@ -19,7 +19,7 @@ const toggleShowMenu = () => {
 
         <div class="hidden md:flex grow space-x-8 justify-end">
           <NavigationBarLink to="/">Home</NavigationBarLink>
-          <NavigationBarLink to="/tracker">Tracker</NavigationBarLink>
+          <NavigationBarLink to="/multiplayer">Multiplayer</NavigationBarLink>
           <NavigationBarLink to="/settings">Settings</NavigationBarLink>
           <NavigationBarLink to="/about">About</NavigationBarLink>
         </div>
@@ -37,7 +37,7 @@ const toggleShowMenu = () => {
     <div v-if="showMenu">
       <div class="flex flex-col items-center text-xl space-y-8 pb-24">
         <NavigationBarLink to="/" @click="toggleShowMenu">Home</NavigationBarLink>
-        <NavigationBarLink to="/tracker" @click="toggleShowMenu">Tracker</NavigationBarLink>
+        <NavigationBarLink to="/multiplayer" @click="toggleShowMenu">Multiplayer</NavigationBarLink>
         <NavigationBarLink to="/settings" @click="toggleShowMenu">Settings</NavigationBarLink>
         <NavigationBarLink to="/about" @click="toggleShowMenu">About</NavigationBarLink>
       </div>
