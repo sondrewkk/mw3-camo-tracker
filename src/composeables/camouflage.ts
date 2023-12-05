@@ -17,8 +17,9 @@ export function useCamo() {
   const { weapons } = useWeapons()
   const camouflages: Camouflage[] = weapons.value.map((weapon) => weapon.camouflages).flat()
 
-  const getCamouflageChallenge = (camoName: string) => {
-    return camouflages.find((camouflage) => camouflage.name === camoName)?.challenge
+  const getCamouflageChallenge = (weapon_name: string, camoName: string) => {
+    const weapon = weapons.value.find((weapon) => weapon.name === weapon_name)
+    return weapon?.camouflages.find((camouflage) => camouflage.name === camoName)?.challenge
   }
 
   const getCamouflageType = (camoName: string) => {

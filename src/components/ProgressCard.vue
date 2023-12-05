@@ -71,7 +71,7 @@ const emit = defineEmits<{
               @clicked="emit('toggle-camouflage-complete', camo.camouflageName)"
             />
             <p v-if="displayList">
-              {{ getCamouflageChallenge(camo.camouflageName) }}
+              {{ getCamouflageChallenge(weaponProgress.weaponName, camo.camouflageName) }}
             </p>
           </div>
         </div>
