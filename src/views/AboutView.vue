@@ -2,7 +2,7 @@
 import UsageList from '@/components/about/UsageList.vue'
 
 const headerStyle =
-  'text-4xl p-6 md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-secondary to-primary'
+  'text-4xl p-6 md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-secondary to-primary'
 </script>
 
 <template>
