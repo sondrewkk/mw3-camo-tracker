@@ -5,7 +5,7 @@ import { useWeaponProgressStore } from '@/stores/weaponProgressStore'
 import { useWeapons } from '@/composeables/weapon'
 
 const route = useRoute()
-const showBar = computed(() => route.path === '/tracker')
+const showBar = computed(() => route.path === '/multiplayer')
 const weaponProgressStore = useWeaponProgressStore()
 const { totalCamouflages } = useWeapons()
 

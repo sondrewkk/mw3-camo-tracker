@@ -11,7 +11,7 @@ const imgUrl = computed(() => getCamoImgUrl(props.progress.camouflageName))
 
 const getCamoImgUrl = (name: string) => {
   const formattedName = name.replace(/\s+/g, '_').toLowerCase()
-  const url = new URL(`../assets/camo/${formattedName}.png`, import.meta.url)
+  const url = new URL(`../../assets/camo/${formattedName}.png`, import.meta.url)
   return url.href
 }
 

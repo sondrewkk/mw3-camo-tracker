@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { WeaponProgress } from '@/composeables/weaponProgress'
-import CamoImg from './CamoImg.vue'
+import CamoImg from '@/components/progress_card/CamoImg.vue'
 import { useCamo } from '@/composeables/camouflage'
 import { HeartIcon } from '@heroicons/vue/24/solid'
 import { computed } from 'vue'
