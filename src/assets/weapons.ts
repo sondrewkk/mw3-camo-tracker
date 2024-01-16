@@ -120,7 +120,7 @@ export const allWeapons: Weapon[] = [
         set: '',
         type: 'COMPLETIONIST',
         gameMode: 'MULTIPLAYER',
-        challenge: 'Get 15 headshots kills with a magnification scope',
+        challenge: 'Get 10 enimies affected by tactical while in tac stance',
         requirement: 'Complete 36 forged camo challenges'
       }
     ]
@@ -244,13 +244,13 @@ export const allWeapons: Weapon[] = [
         set: '',
         type: 'COMPLETIONIST',
         gameMode: 'MULTIPLAYER',
-        challenge: 'Get 15 headshots kills with a magnification scope',
+        challenge: 'Get 5 kills without dying 10 times',
         requirement: 'Complete 36 forged camo challenges'
       }
     ]
   },
   {
-    name: 'DG-58',
+    name: 'DG-56',
     category: 'Assault rifle',
     camouflages: [
       {
