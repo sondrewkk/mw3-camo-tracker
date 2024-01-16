@@ -120,7 +120,7 @@ export const allWeapons: Weapon[] = [
         set: '',
         type: 'COMPLETIONIST',
         gameMode: 'MULTIPLAYER',
-        challenge: 'Get 10 enimies affected by tactical while in tac stance',
+        challenge: 'Get 10 enemies affected by tactical while in tac stance',
         requirement: 'Complete 36 forged camo challenges'
       }
     ]
