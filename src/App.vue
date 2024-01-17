@@ -4,7 +4,7 @@ import NavigationBar from '@/components/navigation/NavigationBar.vue'
 import { useHead } from '@unhead/vue'
 
 useHead({
-  title: "MW3 Cammo Tracker - Interstellar",
+  title: "MW3 Camo Tracker - Interstellar",
   meta: [
     {
       name: "description",
