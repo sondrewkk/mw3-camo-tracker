@@ -1,6 +1,26 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
 import NavigationBar from '@/components/navigation/NavigationBar.vue'
+import { useHead } from '@unhead/vue'
+
+useHead({
+  title: "MW3 Cammo Tracker - Interstellar",
+  meta: [
+    {
+      name: "description",
+      content: "Manually track your cammofluage progress in Call of Duty: Modern Warfare 3.",
+    },
+    {
+      name: "keywords",
+      content: "MW3, Cammo Tracker, Call of Duty, Modern Warfare 3, Cammofluage Progress",
+    },
+    {
+      name: "author",
+      content: "Sondre William Kaldhussæter-Knutsen",
+    },
+  ]
+})
+
 </script>
 
 <template>
